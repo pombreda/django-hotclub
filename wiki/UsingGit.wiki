@@ -25,14 +25,6 @@ git svn clone http://django-friends.googlecode.com/svn/trunk/ django-friends
 git svn clone http://django-notification.googlecode.com/svn/trunk/ django-notification
 }}}
 
-These are optional:
-
-{{{
-git svn clone http://django-navbar.googlecode.com/svn/trunk/ django-navbar
-git svn clone http://django-survey.googlecode.com/svn/trunk/ django-survey
-git svn clone http://django-feedutil.googlecode.com/svn/trunk/ django-feedutil
-}}}
-
 It is really up to you how you go about getting the applications above. I use {{{ git-svn }}} because it makes it simple for me patch things in those applications and submit and or commit patches. Now somewhere else checkout the Pinax code using {{{ git-svn }}}:
 
 {{{
