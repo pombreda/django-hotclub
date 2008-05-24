@@ -29,13 +29,13 @@ It is really up to you how you go about getting the applications above. I use {{
 
 {{{
 cd ~/Development
-git-svn clone http://django-hotclub.googlecode.com/svn/trunk/ django-hotclub
+git-svn clone http://django-hotclub.googlecode.com/svn/trunk/projects/pinax
 }}}
 
 Now all that is left is using a symlink to hook everything up. Here is all the dirty work based on the {{{ ~/Development }}} folder:
 
 {{{
-cd django-hotclub/projects/pinax
+cd pinax
 ln -s ~/Development/django-apps/django-mailer/mailerdev/mailer/ mailer
 ln -s ~/Development/django-apps/django-friends/friendsdev/friends/ friends
 ln -s ~/Development/django-apps/django-databasetemplateloader/dbtemplates/ dbtemplates
