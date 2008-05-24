@@ -1,0 +1,51 @@
+#labels Phase-Implementation
+= Using Git with Pinax =
+
+If you choose to use git, who wouldn't, read this to learn how to setup Pinax. Unfortnetely checking out the Pinax source code is not as simple as a {{{ git svn clone }}}. Pinax contains some svn:externals that just do not work with {{{ git-svn }}}.
+
+There are several tutorials online that describe different methods of dealing with svn:externals, but I (brosner) prefer this method so far. That is, until someone can provide a simpler method. It is typically a good idea to keep a local directory of reusable Django applications that you can use across different projects. This is really no exception.
+
+Setup a place to store Django apps:
+
+{{{
+mkdir ~/Development/django-apps
+cd ~/Development/django-apps
+}}}
+
+Then checkout the Pinax dependancies:
+
+{{{
+git svn clone http://django-mailer.googlecode.com/svn/trunk/ django-mailer
+git svn clone http://django-friends.googlecode.com/svn/trunk/ django-friends
+git svn clone http://django-navbar.googlecode.com/svn/trunk/ django-navbar
+git svn clone http://django-survey.googlecode.com/svn/trunk/ django-survey
+git svn clone http://django-feedutil.googlecode.com/svn/trunk/ django-feedutil
+git svn clone http://django-email-confirmation.googlecode.com/svn/trunk/ django-email-confirmation
+git svn clone http://django-command-extensions.googlecode.com/svn/trunk/ django-command-extensions
+git svn clone http://django-robots.googlecode.com/svn/trunk/ django-robots
+git svn clone http://django-databasetemplateloader.googlecode.com/svn/trunk/ django-databasetemplateloader
+git svn clone http://django-friends.googlecode.com/svn/trunk/ django-friends
+git svn clone http://django-notification.googlecode.com/svn/trunk/ django-notification
+}}}
+
+It is really up to you how you go about getting the applications above. I use {{{ git-svn }}} because it makes it simple for me patch things in those applications and submit and or commit patches. Now somewhere else checkout the Pinax code using {{{ git-svn }}}:
+
+{{{
+cd ~/Development
+git-svn clone http://django-hotclub.googlecode.com/svn/trunk/ django-hotclub
+}}}
+
+Now all that is left is using a symlink to hook everything up. Here is all the dirty work based on the {{{ ~/Development }}} folder:
+
+{{{
+cd django-hotclub/projects/pinax
+ln -s ~/Development/django-apps/django-mailer/mailerdev/mailer/ mailer
+ln -s ~/Development/django-apps/django-friends/friendsdev/friends/ friends
+ln -s ~/Development/django-apps/django-databasetemplateloader/dbtemplates/ dbtemplates
+ln -s ~/Development/django-apps/django-robots/robots/ robots
+ln -s ~/Development/django-apps/django-command-extensions/extensions/ extensions
+ln -s ~/Development/django-apps/django-email-confirmation/devproject/emailconfirmation/ emailconfirmation
+ln -s ~/Development/django-apps/django-notification/notification/ notification
+}}}
+
+You are all set up. This might be good practice for other places where you need to reuse applications in projects without hacking around with the {{{ PYTHONPATH }}}.
