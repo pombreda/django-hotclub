@@ -21,7 +21,6 @@ git svn clone http://django-email-confirmation.googlecode.com/svn/trunk/ django-
 git svn clone http://django-command-extensions.googlecode.com/svn/trunk/ django-command-extensions
 git svn clone http://django-robots.googlecode.com/svn/trunk/ django-robots
 git svn clone http://django-databasetemplateloader.googlecode.com/svn/trunk/ django-databasetemplateloader
-git svn clone http://django-friends.googlecode.com/svn/trunk/ django-friends
 git svn clone http://django-notification.googlecode.com/svn/trunk/ django-notification
 }}}
 
