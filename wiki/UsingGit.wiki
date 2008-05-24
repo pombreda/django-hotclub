@@ -22,6 +22,7 @@ git svn clone http://django-command-extensions.googlecode.com/svn/trunk/ django-
 git svn clone http://django-robots.googlecode.com/svn/trunk/ django-robots
 git svn clone http://django-databasetemplateloader.googlecode.com/svn/trunk/ django-databasetemplateloader
 git svn clone http://django-notification.googlecode.com/svn/trunk/ django-notification
+git svn clone http://django-messages.googlecode.com/svn/trunk/ django-messages
 }}}
 
 It is really up to you how you go about getting the applications above. I use {{{ git-svn }}} because it makes it simple for me patch things in those applications and submit and or commit patches. Now somewhere else checkout the Pinax code using {{{ git-svn }}}:
@@ -42,6 +43,7 @@ ln -s ~/Development/django-apps/django-robots/robots/ robots
 ln -s ~/Development/django-apps/django-command-extensions/extensions/ extensions
 ln -s ~/Development/django-apps/django-email-confirmation/devproject/emailconfirmation/ emailconfirmation
 ln -s ~/Development/django-apps/django-notification/notification/ notification
+ln -s ~/Development/django-apps/django-messages/messages/ messages
 }}}
 
 You are all set up. This might be good practice for other places where you need to reuse applications in projects without hacking around with the {{{ PYTHONPATH }}}.
