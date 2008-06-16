@@ -24,6 +24,17 @@ git svn clone http://django-databasetemplateloader.googlecode.com/svn/trunk/ dja
 git svn clone http://django-notification.googlecode.com/svn/trunk/ django-notification
 git svn clone http://django-messages.googlecode.com/svn/branches/django-trunk/ django-messages
 git svn clone http://django-announcements.googlecode.com/svn/trunk/ django-announcements
+git svn clone http://django-oembed.googlecode.com/svn/trunk/ django-oembed
+git svn clone http://django-db-log.googlecode.com/svn/trunk/ django-db-log
+git svn clone http://django-pagination.googlecode.com/svn/trunk/ django-pagination
+git svn clone http://django-threadedcomments.googlecode.com/svn/trunk/ django-threadedcomments
+git svn clone http://django-wikiapp.googlecode.com/svn/trunk/ django-wikiapp
+git svn clone http://django-evolution.googlecode.com/svn/trunk/ django-evolution
+git svn clone http://django-timezones.googlecode.com/svn/trunk/ django-timezones
+git svn clone http://django-feedutil.googlecode.com/svn/trunk/ django-feedutil
+git svn clone http://django-app-plugins.googlecode.com/svn/trunk/ django-app-plugins
+git svn clone http://django-voting.googlecode.com/svn/trunk/ django-voting
+git svn clone http://django-logging.googlecode.com/svn/trunk/ django-logging
 
 }}}
 
@@ -47,6 +58,17 @@ ln -s ~/Development/django-apps/django-email-confirmation/devproject/emailconfir
 ln -s ~/Development/django-apps/django-notification/notification/ notification
 ln -s ~/Development/django-apps/django-messages/messages/ messages
 ln -s ~/Development/django-apps/django-announcements/announcements/ announcements
+ln -s ~/Development/django-apps/django-oembed/oembed/ oembed
+ln -s ~/Development/django-apps/django-db-log/djangodblog/ djangodblog
+ln -s ~/Development/django-apps/django-pagination/pagination/ pagination
+ln -s ~/Development/django-apps/django-threadedcomments/threadedcomments/ threadedcomments
+ln -s ~/Development/django-apps/django-wikiapp/wiki/ wiki
+ln -s ~/Development/django-apps/django-evolution/django_evolution/ django_evolution
+ln -s ~/Development/django-apps/django-timezones/timezones/ timezones
+ln -s ~/Development/django-apps/django-feedutil/feedutil/ feedutil
+ln -s ~/Development/django-apps/django-app-plugins/app_plugins/ app_plugins
+ln -s ~/Development/django-apps/django-voting/voting/ voting
+ln -s ~/Development/django-apps/django-logging/djangologging/ djangologging
 }}}
 
 You are all set up. This might be good practice for other places where you need to reuse applications in projects without hacking around with the {{{ PYTHONPATH }}}.
