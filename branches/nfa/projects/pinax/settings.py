@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'app_plugins',
     'voting',
     'bookmarks',
+    'tagging',
     
     # internal (for now)
     'analytics',
