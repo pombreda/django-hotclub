@@ -125,8 +125,9 @@ INSTALLED_APPS = (
     'feedutil',
     'app_plugins',
     'voting',
+	'tagging',
     'bookmarks',
-    'tagging',
+	'blog',
     
     # internal (for now)
     'analytics',
