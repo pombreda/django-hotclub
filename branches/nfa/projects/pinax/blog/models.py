@@ -57,11 +57,6 @@ class Post(models.Model):
         ordering  			= ('-publish',)
         get_latest_by 		= 'publish'
 
-    class Admin:
-        list_display  		= ('title', 'publish', 'status')
-        list_filter   		= ('publish', 'status')
-        search_fields 		= ('title', 'body', 'tease')
-
     def __unicode__(self):
         return u'%s' % self.title
 
