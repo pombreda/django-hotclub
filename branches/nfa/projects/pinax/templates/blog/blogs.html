@@ -26,7 +26,7 @@
 	
 			{% for blogs in blogs %}
 				<div class="blog-post clearfix">
-					<h2><a href="{{ blogs.get_permalink_url }}">{{ blogs.title }}</a></h2>
+					<h2><a href="{{ blogs.get_absolute_url }}">{{ blogs.title }}</a></h2>
 					<div class="blog-post-tease">
 					
 						{% with blogs.tease as body %}

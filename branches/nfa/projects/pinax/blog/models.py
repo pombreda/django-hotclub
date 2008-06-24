@@ -41,19 +41,17 @@ class Post(models.Model):
     tease           = models.TextField(_('tease'), blank=True)
     status          = models.IntegerField(_('status'), choices=STATUS_CHOICES, default=2)
     allow_comments  = models.BooleanField(_('allow comments'), default=True)
-    publish         = models.DateTimeField(_('publish'), auto_now_add=True)
-    created_at      = models.DateTimeField(_('created at'), auto_now_add=True)
-    updated_at      = models.DateTimeField(_('updated at'), auto_now=True)
+    publish         = models.DateTimeField(_('publish'), default=datetime.now)
+    created_at      = models.DateTimeField(_('created at'), default=datetime.now)
+    updated_at      = models.DateTimeField(_('updated at'))
     markup 			= models.CharField(_(u"Article Content Markup"), max_length=3,
                               choices=markup_choices,
                               null=True, blank=True)
     tags 			= TagField()
 
-
     class Meta:
         verbose_name 		= _('post')
         verbose_name_plural = _('posts')
-        db_table  			= 'blog_posts'
         ordering  			= ('-publish',)
         get_latest_by 		= 'publish'
 
@@ -61,7 +59,11 @@ class Post(models.Model):
         return u'%s' % self.title
 
     @permalink
-    def get_permalink_url(self):
+    def get_absolute_url(self):
 		return ('article', None, {
 			'slug': self.slug
 		})
+
+    def save(self):
+        self.updated_at = datetime.now()
+        super(Post, self).save()
