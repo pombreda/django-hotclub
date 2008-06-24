@@ -1,3 +1,5 @@
+import profiles.admin
+
 from app_plugins import Library
 
 register = Library()

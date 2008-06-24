@@ -1,1 +1,1 @@
-
+import django_openidauth.admin

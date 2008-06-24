@@ -33,9 +33,6 @@ class Tribe(models.Model):
         return ("tribe_detail", [self.slug])
     get_absolute_url = models.permalink(get_absolute_url)
     
-    class Admin:
-        list_display = ('name', 'creator', 'created',)
-
 
 class Topic(models.Model):
     """
@@ -60,9 +57,6 @@ class Topic(models.Model):
     class Meta:
         ordering = ('-modified', )
     
-    class Admin:
-        list_display = ('title', )
-
 
 from threadedcomments.models import ThreadedComment
 def new_comment(sender, instance):
