@@ -1,0 +1,11 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block rtab_id %}id="wiki_tab"{% endblock %}
+
+{% block subnav %}
+    <ul>
+        <li><a href="{% url wiki_article_list group.slug %} ">{% trans "All Articles" %}</a></li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "wiki/base.html" %}
+
+{% load i18n %}
+{% load wiki %}
+
+{% block head_title %}Pinax : Wiki for {{ group.name }} {% endblock %}
+
+{% block body %}
+
+    <div class="right_panel">
+        <div class="tribes">
+            <h2>{% trans "Actions" %}</h2>
+            {% if article.id %}
+            <li><a href="{% url wiki_edit_article title=article.title,group_slug=group.slug %}">{% trans "Edit this article" %}</a> </li>
+            <li><a href="{% url wiki_article_history title=article.title,group_slug=group.slug %}">{% trans "Editing history" %}</a> </li>
+            {% else %}
+            <li><a href="{% url wiki_edit_article title=article.title,group_slug=group.slug %}">{% trans "Create this article" %}</a></li>
+            {% endif %}
+        </div>
+    </div>
+
+    <h1>{% trans "Wiki for Tribe" %} <a href="{% url tribe_detail group.slug %}">{{ group.name }}</a></h1>
+
+    <h2><a href="{{ article.get_absolute_url }}" rel="bookmark">{{ article.title }}</a></h2>
+
+    {% if not article.id %}
+        <p>
+            {% trans "This article does not exist." %}
+            <a href="{% url wiki_edit_article title=article.title,group_slug=group.slug %}" {% trans ">Create it now</a>?" %}
+        </p>
+    {% endif %}
+
+    {% render_content article %}
+
+    {% if can_observe %}
+        {% if is_observing %}
+            <form action="{% url wiki_stop_observing_article title=article.title,group_slug=group.slug %}" method="post">
+                <input type="submit" value="Stop Observing Article">
+            </form>
+        {% else %}
+            <form action="{% url wiki_observe_article title=article.title,group_slug=group.slug %}" method="post">
+                <input type="submit" value="Observe Article">
+            </form>
+        {% endif %}
+    {% endif %}
+{% endblock %}
