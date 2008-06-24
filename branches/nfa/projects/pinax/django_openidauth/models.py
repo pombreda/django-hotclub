@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django_openidconsumer.util import OpenID
 
 class UserOpenID(models.Model):
-    user = models.ForeignKey(User, raw_id_admin=True)
+    user = models.ForeignKey(User)
     openid = models.CharField(max_length=255)
     created_at = models.DateTimeField()
 
