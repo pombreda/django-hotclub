@@ -20,10 +20,10 @@
 		<h2>{{ post.title }}</h2>
 		<div class="blog-meta"><p>Posted by: <a href="{% url profiles.views.profile post.author.username %}">{{ post.author.username }}</a> on {{ post.publish|date }}</p></div>
 		<div class="blog-tags">
-			<p>Tags: 
+			<p><img src="/site_media/comment.png" border="0" class="noborder" align="absmiddle" />
 			{% tags_for_object post as tags %}
 			{% for tag in tags %}
-				{{ tag }}
+				<a href="/tags/{{ tag }}">{{ tag }}</a>
 			{% endfor %}</p>
 		</div>
 		
@@ -41,6 +41,7 @@
 	<h3>Comments on This Post:</h3>
     {% get_threaded_comment_tree for post as responses %}
     
+	<a name="comments"></a>
     <ul class="responses">
         {% for response in responses %}
             <li class="{% cycle even,odd %} thread-{{ response.depth }} clearfix">

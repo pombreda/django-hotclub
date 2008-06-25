@@ -711,3 +711,6 @@ p.what_next {
 	margin: 0;
 }
 
+.blog-post-meta img.noborder {
+	border: 0;
+}
