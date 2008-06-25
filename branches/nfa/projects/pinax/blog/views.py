@@ -15,7 +15,7 @@ def blogs(request):
 	blogs = Post.objects.filter(status=2).order_by("-publish")
 	return render_to_response("blog/blogs.html", {"blogs": blogs}, context_instance=RequestContext(request))
 	
-def article(request, slug):
+def article(request, username, slug):
 	post = get_object_or_404(Post, slug=slug)
 	return render_to_response("blog/article.html", {
 						"post": post}, context_instance=RequestContext(request))

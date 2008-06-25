@@ -61,6 +61,7 @@ class Post(models.Model):
     @permalink
     def get_absolute_url(self):
 		return ('article', None, {
+			'username': self.author.username,
 			'slug': self.slug
 		})
 
