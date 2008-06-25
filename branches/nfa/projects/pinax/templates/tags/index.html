@@ -1,4 +1,4 @@
-{% extends "blog/base.html" %}
+{% extends "site_base.html" %}
 
 {% load i18n %}
 {% load gravatar %}
@@ -16,15 +16,14 @@
 {% block body %}
     <p><span class="warning">Note</span>: this is an <b>experimental</b> feature that is subject to massive change at any time.</p>
 
-	<h1>{% trans "All Blogs" %}</h1>
-    
-    
-	{% if blogs %}
+	<h1>{% trans "All Blog Posts Matching " %}{{ tagname }}</h1>
+	
+	{% if alltags %}
 		<p>{% trans "These are blog posts from everyone:" %}</p>
 	
-		{% autopaginate blogs %}
+		{% autopaginate alltags %}
 	
-			{% for blogs in blogs %}
+			{% for blogs in alltags %}
 				<div class="blog-post clearfix">
 					<h2><a href="{{ blogs.get_absolute_url }}">{{ blogs.title }}</a></h2>
 					<div class="blog-post-tease">
@@ -58,5 +57,5 @@
 	{% else %}
 		No blog posts yet.
 	{% endif %}
-    
+	
 {% endblock %}

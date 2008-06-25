@@ -10,12 +10,12 @@ urlpatterns = patterns('',
     # all blog posts
     url(r'^$', 'blog.views.blogs'),
 
-	# your articles
-	url(r'^yourarticles/$', 'blog.views.yourarticles', name="your_articles"),
-	
+    # your articles
+    url(r'^yourarticles/$', 'blog.views.yourarticles', name="your_articles"),
+    
     # new blog post
-	url(r'^new/$', 'blog.views.new'),
-	
-	# edit blog post
-	url(r'^edit/(\d+)/$', 'blog.views.edit', name="edit_post"),
+    url(r'^new/$', 'blog.views.new'),
+    
+    # edit blog post
+    url(r'^edit/(\d+)/$', 'blog.views.edit', name="edit_post"),
 )

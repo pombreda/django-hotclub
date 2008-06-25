@@ -28,7 +28,7 @@
 						<p><b>Tags:</b><br /> 
 						{% tags_for_object blogs as tags %}
 						{% for tag in tags %}
-							{{ tag }}
+							<a href="/tags/{{ tag }}">{{ tag }}</a>
 						{% endfor %}</p>
 					</div>
 				</div>
