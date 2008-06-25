@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^$', 'blog.views.blogs'),
 
 	# your articles
-	url(r'^yourarticles/$', 'blog.views.yourarticles'),
+	url(r'^yourarticles/$', 'blog.views.yourarticles', name="your_articles"),
 	
     # new blog post
 	url(r'^new/$', 'blog.views.new'),

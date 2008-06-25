@@ -1,6 +1,8 @@
 from django.shortcuts import render_to_response, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.template import RequestContext
-
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from blog.models import Post
@@ -37,7 +39,7 @@ def new(request):
 			blog.author = request.user
 			blog.creator_ip = request.META['REMOTE_ADDR']
 			blog.save()
-			blog_form = BlogForm()
+			return HttpResponseRedirect(reverse("your_articles"))
 		else:
 			blog_form = BlogForm()
 	else:
@@ -47,20 +49,21 @@ def new(request):
 						}, context_instance=RequestContext(request))
 						
 def edit(request, id):
-	if request.method == "GET":
+	if request.user.is_authenticated() and request.method == "POST":
+		post = get_object_or_404(Post, id=id)
+		if request.POST["action"] == "update":
+			blog_form = BlogForm(request.POST, instance=post)
+			blog = blog_form.save(commit=False)
+			blog.save()
+			return HttpResponseRedirect(reverse("your_articles"))
+		else:
+			blog_form = BlogForm(instance=post)
+	else:
 		post = get_object_or_404(Post, id=id)
 		if post.author == request.user:
 			is_author = True
 		else:
 			is_author = False
 		
-		if request.user.is_authenticated() and request.method == "POST":
-			if request.POST["action"] == "update":
-				blog_form = BlogForm(request.POST, instance=post)
-				blog = blog_form.save(commit=False)
-				blog.save()
-			else:
-				blog_form = BlogForm(instance=post)
-		
-		blog_form = BlogForm(instance=post)
+	blog_form = BlogForm(instance=post)
 	return render_to_response("blog/edit.html", {"is_author": is_author, "blog_form": blog_form}, context_instance=RequestContext(request))
