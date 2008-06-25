@@ -11,12 +11,12 @@
 {% load switchcase %}
 {% load restructuredtext %}
 
-{% block head_title %}Pinax : {% blocktrans %}All Blogs{% endblocktrans %}{% endblock %}
+{% block head_title %}Pinax : {% blocktrans %}Tags{% endblocktrans %}{% endblock %}
 
 {% block body %}
     <p><span class="warning">Note</span>: this is an <b>experimental</b> feature that is subject to massive change at any time.</p>
 
-	<h1>{% trans "All Blog Posts Matching " %}{{ tagname }}</h1>
+	<h1>{% trans "All Blog Posts Matching " %}<i>"{{ tag }}"</i></h1>
 	
 	{% if alltags %}
 		<p>{% trans "These are blog posts from everyone:" %}</p>
@@ -57,5 +57,6 @@
 	{% else %}
 		No blog posts yet.
 	{% endif %}
+	
 	
 {% endblock %}
