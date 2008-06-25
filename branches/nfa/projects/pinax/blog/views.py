@@ -16,10 +16,12 @@ def blogs(request):
 	return render_to_response("blog/blogs.html", {"blogs": blogs}, context_instance=RequestContext(request))
 	
 def article(request, username, slug):
-	user = User.objects.get(username=username)
-	post = get_object_or_404(Post, slug=slug, author=user)
+	post = Post.objects.filter(slug=slug).filter(author__username=username)
+	if not post:
+	    raise Http404
+		
 	return render_to_response("blog/article.html", {
-						"post": post}, context_instance=RequestContext(request))
+						"post": post[0]}, context_instance=RequestContext(request))
 	
 def yourarticles(request):
 	user = request.user
