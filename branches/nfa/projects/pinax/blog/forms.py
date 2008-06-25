@@ -9,4 +9,4 @@ class BlogForm(forms.ModelForm):
 	class Meta:
 		model = Post
 		exclude = ('author', 'creator_ip',
-                   'created_at', 'last_update', 'publish')
+                   'created_at', 'updated_at', 'publish')
