@@ -34,7 +34,7 @@ class Post(models.Model):
         (2, _('Public')),
     )
     title           = models.CharField(_('title'), max_length=200)
-    slug            = models.SlugField(_('slug'), unique=True)
+    slug            = models.SlugField(_('slug'))
     author          = models.ForeignKey(User, related_name="added_posts", blank=True, null=True)
     creator_ip 		= models.IPAddressField(_("IP Address of the Article Creator"), blank=True, null=True)
     body            = models.TextField(_('body'))
@@ -54,6 +54,7 @@ class Post(models.Model):
         verbose_name_plural = _('posts')
         ordering  			= ('-publish',)
         get_latest_by 		= 'publish'
+        unique_together     = ('author', 'slug')
 
     def __unicode__(self):
         return u'%s' % self.title
