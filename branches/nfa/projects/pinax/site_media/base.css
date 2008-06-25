@@ -97,7 +97,7 @@ h1 {
 }
 #tabhead .tabs td {
     vertical-align: bottom;
-    padding-right: 10px;
+    padding-right: 0; /* space between tabs */
     padding-bottom: 1px; /* must be same thickness as tab border */
 }
 #tabhead .tab a, #tabhead .tab a:visited {
@@ -125,7 +125,7 @@ h1 {
 }
 #tabhead .right_tab td {
     vertical-align: bottom;
-    padding-right: 10px;
+    padding-right: 0; /* space between tabs */
     padding-bottom: 1px; /* must be same thickness as tab border */
 }
 
