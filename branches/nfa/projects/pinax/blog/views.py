@@ -16,7 +16,8 @@ def blogs(request):
 	return render_to_response("blog/blogs.html", {"blogs": blogs}, context_instance=RequestContext(request))
 	
 def article(request, username, slug):
-	post = get_object_or_404(Post, slug=slug)
+	user = User.objects.get(username=username)
+	post = get_object_or_404(Post, slug=slug, author=user)
 	return render_to_response("blog/article.html", {
 						"post": post}, context_instance=RequestContext(request))
 	
