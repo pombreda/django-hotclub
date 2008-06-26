@@ -5,8 +5,10 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.views.generic import date_based
 from blog.models import Post
 from blog.forms import *
+import datetime
 
 try:
     from notification import models as notification
@@ -17,7 +19,7 @@ def blogs(request):
 	blogs = Post.objects.filter(status=2).order_by("-publish")
 	return render_to_response("blog/blogs.html", {"blogs": blogs}, context_instance=RequestContext(request))
 	
-def article(request, username, slug):
+def article(request, username, month, year, slug):
 	post = Post.objects.filter(slug=slug).filter(author__username=username)
 	if not post:
 	    raise Http404

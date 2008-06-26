@@ -5,7 +5,7 @@ from blog import views, models
 
 urlpatterns = patterns('',
     # blog post
-    url(r'^article/(?P<username>[-\w]+)/(?P<slug>[-\w]+)/$', 'blog.views.article', name='article'),
+    url(r'^article/(?P<username>[-\w]+)/(?P<month>[a-z]{3})/(?P<year>\d{4})/(?P<slug>[-\w]+)/$', 'blog.views.article', name='article'),
 
     # all blog posts
     url(r'^$', 'blog.views.blogs'),
