@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.generic import date_based
+
 from blog.models import Post
 from blog.forms import *
 import datetime
@@ -20,7 +21,9 @@ def blogs(request):
 	return render_to_response("blog/blogs.html", {"blogs": blogs}, context_instance=RequestContext(request))
 	
 def article(request, username, month, year, slug):
-	post = Post.objects.filter(slug=slug).filter(author__username=username)
+	post = Post.objects.filter(slug=slug, 
+							publish__year = int(year), 
+							publish__month = int(month)).filter(author__username=username)
 	if not post:
 	    raise Http404
 		
@@ -41,6 +44,7 @@ def new(request):
 			blog.author = request.user
 			blog.creator_ip = request.META['REMOTE_ADDR']
 			blog.save()
+			request.user.message_set.create(message="Successfully saved article '%s'" % blog.title)
 			return HttpResponseRedirect(reverse("your_articles"))
 		else:
 			blog_form = BlogForm()
@@ -57,6 +61,7 @@ def edit(request, id):
 			blog_form = BlogForm(request.POST, instance=post)
 			blog = blog_form.save(commit=False)
 			blog.save()
+			request.user.message_set.create(message="Successfully updated article '%s'" % blog.title)
 			return HttpResponseRedirect(reverse("your_articles"))
 		else:
 			blog_form = BlogForm(instance=post)
