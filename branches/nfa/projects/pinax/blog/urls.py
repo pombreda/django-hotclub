@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
 
 from blog import views, models
+from blog.forms import *
 
 
 urlpatterns = patterns('',
@@ -18,4 +19,7 @@ urlpatterns = patterns('',
     
     # edit blog post
     url(r'^edit/(\d+)/$', 'blog.views.edit', name="edit_post"),
+
+    # ajax validation
+    (r'^validate/$', 'ajax_validation.views.validate', {'form_class': BlogForm}, 'blog_form_validate'),
 )
