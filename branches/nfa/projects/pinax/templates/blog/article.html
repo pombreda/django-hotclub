@@ -6,16 +6,13 @@
 {% load threadedcommentstags %}
 {% load tagging_tags %}
 {% load wiki %}
-{% load markup %}
-{% load switchcase %}
-{% load restructuredtext %}
 
 {% block head_title %}Pinax : {% blocktrans %}Blog Article{% endblocktrans %}{% endblock %}
 
 {% block body %}
     <p><span class="warning">Note</span>: this is an <b>experimental</b> feature that is subject to massive change at any time.</p>
 
-	
+
 	<div class="blog-article">
 		<h2>{{ post.title }}</h2>
 		<div class="blog-meta"><p>Posted by: <a href="{% url profiles.views.profile post.author.username %}">{{ post.author.username }}</a> on {{ post.publish|date }}</p></div>
@@ -26,21 +23,14 @@
 				<a href="/tags/{{ tag }}">{{ tag }}</a>
 			{% endfor %}</p>
 		</div>
-		
-		{% with post.body as body %}
-	        {% switch post.markup %}
-	            {% case 'rst' %} {{ body|restructuredtext|wikiwords|safe }} {% endcase %}
-	            {% case 'mrk' %} {{ body|force_escape|markdown|wikiwords }} {% endcase %}
-	            {% case 'txl' %} {{ body|force_escape|textile|wikiwords }} {% endcase %}
-	            {% case '' %} {{ body|force_escape|wikiwords|linebreaks|safe }} {% endcase %}
-	        {% endswitch %}
-	    {% endwith %}
-	
+
+        {% render_content post 'body' %}
+
 	</div>
-	
+
 	<h3>Comments on This Post:</h3>
     {% get_threaded_comment_tree for post as responses %}
-    
+
 	<a name="comments"></a>
     <ul class="responses">
         {% for response in responses %}
@@ -76,7 +66,7 @@
         </table>
         <input type="hidden" name="next" value="{{ request.path }}" />
     </form>
-	
+
 
 
 {% endblock %}
@@ -96,5 +86,5 @@
             cform.toggleClass('hidden');
         }
     </script>
-	
+
 {% endblock %}
