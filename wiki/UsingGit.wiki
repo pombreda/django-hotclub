@@ -35,6 +35,10 @@ git svn clone http://django-feedutil.googlecode.com/svn/trunk/ django-feedutil
 git svn clone http://django-app-plugins.googlecode.com/svn/trunk/ django-app-plugins
 git svn clone http://django-voting.googlecode.com/svn/trunk/ django-voting
 git svn clone http://django-logging.googlecode.com/svn/trunk/ django-logging
+git svn clone http://django-bookmarks.googlecode.com/svn/trunk/ django-bookmarks
+git svn clone http://django-tagging.googlecode.com/svn/trunk/ django-tagging
+git svn clone http://django-ajax-validation.googlecode.com/svn/trunk/ django-ajax-validation
+
 
 }}}
 
@@ -69,6 +73,10 @@ ln -s ~/Development/django-apps/django-feedutil/feedutil/ feedutil
 ln -s ~/Development/django-apps/django-app-plugins/app_plugins/ app_plugins
 ln -s ~/Development/django-apps/django-voting/voting/ voting
 ln -s ~/Development/django-apps/django-logging/djangologging/ djangologging
+ln -s ~/Development/django-apps/django-bookmarks/bookmarks/ bookmarks
+ln -s ~/Development/django-apps/django-tagging/tagging/ tagging
+ln -s ~/Development/django-apps/django-ajax-validation/ajax_validation/ ajax_validation
+
 }}}
 
 You are all set up. This might be good practice for other places where you need to reuse applications in projects without hacking around with the {{{ PYTHONPATH }}}.
