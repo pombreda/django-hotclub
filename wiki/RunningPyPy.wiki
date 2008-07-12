@@ -2,11 +2,8 @@ How to get Pinax running on PyPy
 
 = Introduction =
 
-http://code.djangoproject.com/wiki/DjangoAndPyPy
+It is now possible to run Pinax on the PyPy Python 2.4 interpreter. While it is not production ready, it is going to be so soon. The PyPy and Jython projects are looking into using Pinax as a test case.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+http://code.djangoproject.com/wiki/DjangoAndPyPy
