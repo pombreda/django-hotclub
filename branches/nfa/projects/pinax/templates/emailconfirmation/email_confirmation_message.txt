@@ -1,4 +1,0 @@
-{% load i18n %}{% blocktrans %}User '{{ user }}' at Pinax has given this as an email address.
-
-To confirm this is correct, go to {{ activate_url }}
-{% endblocktrans %}
