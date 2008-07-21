@@ -39,6 +39,9 @@ git svn clone http://django-bookmarks.googlecode.com/svn/trunk/ django-bookmarks
 git svn clone http://django-tagging.googlecode.com/svn/trunk/ django-tagging
 git svn clone http://django-ajax-validation.googlecode.com/svn/trunk/ django-ajax-validation
 git svn clone http://django-gravatar.googlecode.com/svn/trunk/ django-gravatar
+git svn clone http://django-crashlog.googlecode.com/svn/trunk/ django-crashlog
+git svn clone http://django-photologue.googlecode.com/svn/branches/2.0 django-photologue
+
 
 
 }}}
@@ -78,6 +81,8 @@ ln -s ~/Development/django-apps/django-bookmarks/bookmarks/ bookmarks
 ln -s ~/Development/django-apps/django-tagging/tagging/ tagging
 ln -s ~/Development/django-apps/django-ajax-validation/ajax_validation/ ajax_validation
 ln -s ~/Development/django-apps/django-gravatar/gravatar gravatar
+ln -s ~/Development/django-apps/django-photologue/photologue/ photologue
+
 
 }}}
 
