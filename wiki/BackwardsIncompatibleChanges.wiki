@@ -4,3 +4,7 @@
 = Backwards Incompatible Changes =
 
 This wiki page indicates the changes to the source code that are backward incompatible. Keep a close eye to this page if you follow the development of Pinax. Stable releases will always contain a change log showing any big changes you must be aware of. This is where they will come from.
+
+=== r887 (September 18, 2008) ===
+
+In r887 we moved `site-packages/` to `external_libs/` and `apps/` to `external_apps/`. We have properly updated `manage.py` to work with this change, but if you are using Pinax in another environment such as mod_python or mod_wsgi, you will need to adjust the `PYTHONPATH` that you set there to reflect this change.
