@@ -10,3 +10,13 @@ This wiki page indicates the changes to the source code that are backward incomp
 In r887 we moved `site-packages/` to `external_libs/` and `apps/` to `external_apps/`. We have properly updated `manage.py` to work with this change, but if you are using Pinax in another environment such as mod_python or mod_wsgi, you will need to adjust the `PYTHONPATH` that you set there to reflect this change.
 
 In some cases the `apps/` directory is not removed by Subversion. If you still have an `apps/` directory in your Pinax tree, you should `rm -rf` that directory.
+
+=== r890 and r895 (September 18, 2008) ===
+
+Similar to r887, in r890 we moved `pinax/local_apps/` up a directory and renamed it to `local_apps/`. In r895 we split apps that are core specific and moved them to `core_apps`. The apps moved are:
+
+ * about
+ * friends_app
+ * games
+ * photos
+ * tag_app
