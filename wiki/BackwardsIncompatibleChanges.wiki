@@ -8,3 +8,5 @@ This wiki page indicates the changes to the source code that are backward incomp
 === r887 (September 18, 2008) ===
 
 In r887 we moved `site-packages/` to `external_libs/` and `apps/` to `external_apps/`. We have properly updated `manage.py` to work with this change, but if you are using Pinax in another environment such as mod_python or mod_wsgi, you will need to adjust the `PYTHONPATH` that you set there to reflect this change.
+
+In some cases the `apps/` directory is not removed by Subversion. If you still have an `apps/` directory in your Pinax tree, you should `rm -rf` that directory.
