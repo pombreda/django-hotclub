@@ -1,0 +1,6 @@
+#summary Backwards incompatible changes for the Pinax project.
+#labels Featured
+
+= Backwards Incompatible Changes =
+
+This wiki page indicates the changes to the source code that are backward incompatible. Keep a close eye to this page if you follow the development of Pinax. Stable releases will always contain a change log showing any big changes you must be aware of. This is where they will come from.
