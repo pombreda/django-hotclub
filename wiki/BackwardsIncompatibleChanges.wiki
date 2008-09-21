@@ -20,3 +20,7 @@ Similar to r887, in r890 we moved `pinax/local_apps/` up a directory and renamed
  * games
  * photos
  * tag_app
+
+=== r908 (September 20, 2008) ===
+
+In order to deal with a naming clash, the internal 'things' app was renamed to 'things_app'.  This change is due to the fact that we will be integrating the external django-things project, which requires the app to be named 'things'.  This _should_ not affect anyone, but we list it because sometimes old files can stick around and this would be high on the suspect list.
