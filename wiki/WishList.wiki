@@ -1,0 +1,7 @@
+#summary apps we'd like to see in Pinax
+
+= Wish List =
+
+== Existing Apps ==
+
+== Yet To Be Written Apps ==
