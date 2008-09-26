@@ -6,7 +6,7 @@ Inclusion here doesn't mean they've been decided on -- just that they are under 
 
 == Existing Apps ==
 
-  * TinyMCE
+  * [http://tinymce.moxiecode.com/ TinyMCE]
   * [http://code.google.com/p/django-filebrowser/ django-filebrowser] or similar
   * [http://code.google.com/p/django-page-cms/ django-page-cms], [http://django-cms.org/ django-cms] or similar
   * [http://github.com/gregnewman/django-cachebuster/tree/master django-cachebuster]
