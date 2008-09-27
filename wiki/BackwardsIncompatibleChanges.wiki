@@ -25,10 +25,8 @@ Similar to r887, in r890 we moved `pinax/local_apps/` up a directory and renamed
 
 In order to deal with a naming clash, the internal 'things' app was renamed to 'things_app'.  This change is due to the fact that we will be integrating the external django-things project, which requires the app to be named 'things'.  This _should_ not affect anyone, but we list it because sometimes old files can stick around and this would be high on the suspect list.
 
-=== r943 (September 27, 2008) ===
-
-This shouldn't break anything yet (but will in a followup check in so wanted to give a heads up) 
+=== r943 through r953 (September 27, 2008) ===
 
 I've split the account and other services information out of the `Profile` model into `Account` and `OtherServiceInfo` models under `account` app. Via signals, `Account`s should now be created whenever a `User` is. Furthermore, there is a new management command `create_accounts_from_profiles` that will migrate over the data from `Profile` to `Account` and `OtherServiceInfo`.
 
-*However* nothing uses the new models yet and so deploying this revision will likely lead to those settings gettings out of sync if changed between now and when the second part of this change is committed.
+Not everything has been converted over to using the new models so any revisions in this range are likely unstable. r943 will work but the database will get out of sync once you run `create_accounts_from_profiles` as the code in that revision is still updating old model.
