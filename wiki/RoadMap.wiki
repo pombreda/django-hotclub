@@ -1,0 +1,8 @@
+#summary the current plan of record
+#labels Featured
+
+ * push out release2 of cloud27.com
+ * put together basic-project
+ * branch for pinax 0.5 release
+ * integrate locations, schedules and OMB (for post-0.5 release)
+ * develop/integrate CMS and document management apps
