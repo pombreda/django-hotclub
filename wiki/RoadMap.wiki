@@ -6,3 +6,5 @@
  * branch for pinax 0.5 release
  * integrate locations, schedules and OMB (for post-0.5 release)
  * develop/integrate CMS and document management apps
+
+If there are apps or snippets, you'd like to see included, go to WishList
