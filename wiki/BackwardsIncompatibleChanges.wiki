@@ -27,6 +27,25 @@ In order to deal with a naming clash, the internal 'things' app was renamed to '
 
 *UPDATE*: If you get a `'module' object has no attribute 'ModelThing'` the most likely cause is the old `things` app under local_apps needs to be deleted. SVN leaves things lying around in sandbox even after they've gone from repos.
 
+=== r915 (September 21, 2008) ===
+
+The introduction of the 'things' app also required changes in the URL configuration of the 'tribes' and 'projects' app. Most notably this affects permalinks of `Project` and `Tribe` instances that might have been saved in notifications and could have been sent out via e-mail to your users.
+
+To compensate this change please change the `urls.py` in your Pinax root directory so it looks like the snippet below. That will redirect to the correct URLs, if one of the old URLs are used:
+
+{{{
+from django.views.generic.simple import redirect_to
+# ...
+urlpatterns = patterns('',
+    # ...
+    (r'^tribes/(?P<slug>((?!create|your_tribes)\w+))/$', redirect_to, {'url': '/tribes/tribe/%(slug)s/'}),
+    (r'^tribes/', include('tribes.urls')),
+    (r'^projects/(?P<slug>((?!create|your_projects)\w+))/$', redirect_to, {'url': '/projects/project/%(slug)s/'}),
+    (r'^projects/', include('projects.urls')),
+    # ...
+)
+}}}
+
 === r943 through r953 (September 27, 2008) ===
 
 I've split the account and other services information out of the `Profile` model into `Account` and `OtherServiceInfo` models under `account` app. Via signals, `Account`s should now be created whenever a `User` is. Furthermore, there is a new management command `create_accounts_from_profiles` that will migrate over the data from `Profile` to `Account` and `OtherServiceInfo`.
