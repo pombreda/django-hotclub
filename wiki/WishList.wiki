@@ -23,6 +23,7 @@ Inclusion here doesn't mean they've been decided on -- just that they are under 
   * [http://code.google.com/p/django-reversion/ django-reversion]
   * [http://code.google.com/p/transdb/ TransDB] or [http://code.google.com/p/django-multilingual/ django-multilingual]
   * [http://github.com/bartTC/django-frontendadmin/tree/master django-frontendadmin]
+  * [http://code.google.com/p/django-batchadmin/ django-batchadmin]
 
 
 == Yet To Be Written Apps ==
