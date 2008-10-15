@@ -1,0 +1,11 @@
+#summary Getting the source
+
+= Getting Source from SVN =
+
+Development is done using SVN. You can get our source code by executing the following in a command prompt:
+
+{{{
+svn checkout https://svn.pinaxproject.com/trunk pinax
+}}}
+
+This will checkout the latest line of development into the directory named `pinax`. We do our best to ensure commits do not break anything, but do keep in mind it is a development version.
