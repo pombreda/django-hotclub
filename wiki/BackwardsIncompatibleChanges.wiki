@@ -51,3 +51,13 @@ urlpatterns = patterns('',
 I've split the account and other services information out of the `Profile` model into `Account` and `OtherServiceInfo` models under `account` app. Via signals, `Account`s should now be created whenever a `User` is. Furthermore, there is a new management command `create_accounts_from_profiles` that will migrate over the data from `Profile` to `Account` and `OtherServiceInfo`.
 
 Not everything has been converted over to using the new models so any revisions in this range are likely unstable. r943 will work but the database will get out of sync once you run `create_accounts_from_profiles` as the code in that revision is still updating old model.
+
+=== *SVN Move* October 14, 2008 ====
+
+We have officially moved our SVN hosting from Google Code to svn.pinaxproject.com. This isn't really a backward incompatible change as in things will start break, but executing `svn up` simply won't pull new changes. To continue to get updates we recommend you re-checkout the code base as follows:
+
+{{{
+svn checkout https://svn.pinaxproject.com/trunk pinax
+}}}
+
+We are now encouraging the use of the name `pinax` at the top-level. One of the reasons for the move is to reduce the confusion on what is django-hotclub and Pinax. There are also several other good reasons why we needed move and they will become apparent in the future.
