@@ -52,7 +52,7 @@ I've split the account and other services information out of the `Profile` model
 
 Not everything has been converted over to using the new models so any revisions in this range are likely unstable. r943 will work but the database will get out of sync once you run `create_accounts_from_profiles` as the code in that revision is still updating old model.
 
-=== *SVN Move* October 14, 2008 ====
+=== *SVN Move* (October 14, 2008) ====
 
 We have officially moved our SVN hosting from Google Code to svn.pinaxproject.com. This isn't really a backward incompatible change as in things will start break, but executing `svn up` simply won't pull new changes. To continue to get updates we recommend you re-checkout the code base as follows:
 
@@ -62,10 +62,12 @@ svn checkout https://svn.pinaxproject.com/trunk pinax
 
 We are now encouraging the use of the name `pinax` at the top-level. One of the reasons for the move is to reduce the confusion on what is django-hotclub and Pinax. There are also several other good reasons why we needed move and they will become apparent in the future.
 
-=== 1091 (October 18, 2008) ===
+Any changes below won't have URLs to the changeset as they are not in the Google code interface. We will be releasing a software management tool for Pinax soon.
+
+=== Revision 1091 (October 18, 2008) ===
 
 I have renamed  two plural models names in photos application (not photologue).  `Photos` is now named `Image` and `PhotoSets` is now named `PhotoSet`.  This change has been successfully tested against all related views and forms as well as the admin.
 
-=== 1103 (October 19, 2008) ===
+=== Revision 1103 (October 19, 2008) ===
 
 The WSGI file that is in the complete_project has been renamed to `complete_project.wsgi`. It was previously named `pinax.wsgi`. This was inconsistent with general naming and the `basic_project` WSGI file that is named `basic_project.wsgi`. Be sure to update your Apache config if you relied on `pinax.wsgi`.
