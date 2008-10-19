@@ -64,4 +64,4 @@ We are now encouraging the use of the name `pinax` at the top-level. One of the 
 
 === 1091 (October 18, 2008) ===
 
-I have renamed  two plural models names in photos application (not photologue).  'Photos' is now named 'Image' and 'PhotoSets' is now named 'PhotoSet'.  This change has been successfully tested against all related views and forms as well as the admin.
+I have renamed  two plural models names in photos application (not photologue).  `Photos` is now named `Image` and `PhotoSets` is now named `PhotoSet`.  This change has been successfully tested against all related views and forms as well as the admin.
