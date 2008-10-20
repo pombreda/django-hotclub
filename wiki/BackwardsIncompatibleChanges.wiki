@@ -71,3 +71,7 @@ I have renamed  two plural models names in photos application (not photologue). 
 === Revision 1103 (October 19, 2008) ===
 
 The WSGI file that is in the complete_project has been renamed to `complete_project.wsgi`. It was previously named `pinax.wsgi`. This was inconsistent with general naming and the `basic_project` WSGI file that is named `basic_project.wsgi`. Be sure to update your Apache config if you relied on `pinax.wsgi`.
+
+=== Revision 1126 (October 20, 2008) ===
+
+We have changed settings.py to expect to import `local_settings.py` instead of `localsettings.py`. You need to simply rename any instances of `localsettings.py` to `local_settings.py` in any project that uses a local settings file to override any defaults.
