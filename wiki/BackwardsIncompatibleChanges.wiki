@@ -68,6 +68,8 @@ Any changes below won't have URLs to the changeset as they are not in the Google
 
 I have renamed  two plural models names in photos application (not photologue).  `Photos` is now named `Image` and `PhotoSets` is now named `PhotoSet`.  This change has been successfully tested against all related views and forms as well as the admin.
 
+You need to perform a `./manage.py syncdb` after this change.
+
 === Revision 1103 (October 19, 2008) ===
 
 The WSGI file that is in the complete_project has been renamed to `complete_project.wsgi`. It was previously named `pinax.wsgi`. This was inconsistent with general naming and the `basic_project` WSGI file that is named `basic_project.wsgi`. Be sure to update your Apache config if you relied on `pinax.wsgi`.
