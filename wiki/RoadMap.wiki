@@ -8,5 +8,7 @@
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
  * expand accounts for different signup patterns, private betas, etc
  * develop/integrate CMS and document management apps
+ * fixtures and automated testing
+ * improved i18n and l10n coverage
 
 If there are apps or snippets you'd like to see included, go to WishList
