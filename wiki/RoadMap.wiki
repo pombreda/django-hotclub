@@ -5,6 +5,7 @@
  * put together basic-project [*DONE*]
  * branch for pinax 0.5 release [*DONE*]
  * integrate locations, schedules and OMB (for post-0.5 release)
+ * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
  * expand accounts for different signup patterns, private betas, etc
  * develop/integrate CMS and document management apps
 
