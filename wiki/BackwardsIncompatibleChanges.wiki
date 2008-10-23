@@ -68,7 +68,7 @@ Any changes below won't have URLs to the changeset as they are not in the Google
 
 I have renamed  two plural models names in photos application (not photologue).  `Photos` is now named `Image` and `PhotoSets` is now named `PhotoSet`.  This change has been successfully tested against all related views and forms as well as the admin.
 
-You need to perform a `./manage.py syncdb` after this change.
+You need to perform a `./manage.py syncdb` after this change. Note that the database will still have the old model tables. You can safely remove them. Pinax never used them for anything. If you had any dependancy on them instead of doing a `syncdb` you can just rename the tables.
 
 === Revision 1103 (October 19, 2008) ===
 
