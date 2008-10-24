@@ -80,6 +80,29 @@ We have removed the `lifestream`, `locations`, `arcade` and `games` apps in time
 
 The WSGI file that is in the complete_project has been renamed to `complete_project.wsgi`. It was previously named `pinax.wsgi`. This was inconsistent with general naming and the `basic_project` WSGI file that is named `basic_project.wsgi`. Be sure to update your Apache config if you relied on `pinax.wsgi`.
 
+=== Revision 1108, 1109, 1110 (October 20, 2008) ===
+
+`core_apps` was removed. This is important for those who copied out a complete_project or basic_project. Since you don't get updates there things will likely fail. They have been split up amongst their projects based on dependancies. You will need to pull down these changes to your project. Here is how you can get up to date:
+
+{{{
+cd /path/to/your_project
+svn export http://svn.pinaxproject.com/pinax/branches/0.5.X/projects/complete_project/apps apps
+svn export http://svn.pinaxproject.com/pinax/branches/0.5.X/projects/complete_project/manage.py
+}}}
+
+If you already have an `apps` directory at the top-level of your project and it is in `sys.path` then just merge in the upstream apps. They are:
+
+complete_project:
+ * `about`
+ * `friends_app`
+ * `tag_app`
+ * `photos`
+
+basic_project:
+ * `about`
+
+If you have made local modifications in your project to `manage.py` you will have to manually merge them. 
+
 === Revision 1126 (October 20, 2008) ===
 
 We have changed settings.py to expect to import `local_settings.py` instead of `localsettings.py`. You need to simply rename any instances of `localsettings.py` to `local_settings.py` in any project that uses a local settings file to override any defaults.
