@@ -3,6 +3,8 @@
 
 = Backwards Incompatible Changes =
 
+== 0.5 ==
+
 This wiki page indicates the changes to the source code that are backward incompatible. Keep a close eye to this page if you follow the development of Pinax. Stable releases will always contain a change log showing any big changes you must be aware of. This is where they will come from.
 
 === r887 (September 18, 2008) ===
@@ -81,3 +83,17 @@ The WSGI file that is in the complete_project has been renamed to `complete_proj
 === Revision 1126 (October 20, 2008) ===
 
 We have changed settings.py to expect to import `local_settings.py` instead of `localsettings.py`. You need to simply rename any instances of `localsettings.py` to `local_settings.py` in any project that uses a local settings file to override any defaults.
+
+== 0.6 ==
+
+=== Revision 1093 (October 18, 2008) ===
+
+The `crashlog` app was removed in favor of `djangodblog`. This is the original project by David Cramer. We have restored it. This only affects those who use or copied from the `complete_project`. If you have copied out your own project you will likely still have references to `crashlog` in your settings. It was in `INSTALLED_APPS` and `MIDDLEWARE_CLASSES`. `MIDDLEWARE_CLASSES` should have:
+
+{{{
+MIDDLEWARE_CLASSES = (
+    ...
+    'djangodblog.middleware.DBLogMiddleware',
+    ...
+)
+}}}
