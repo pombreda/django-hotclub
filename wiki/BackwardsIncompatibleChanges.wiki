@@ -72,9 +72,9 @@ I have renamed  two plural models names in photos application (not photologue). 
 
 You need to perform a `./manage.py syncdb` after this change. Note that the database will still have the old model tables. You can safely remove them. Pinax never used them for anything. If you had any dependancy on them instead of doing a `syncdb` you can just rename the tables.
 
-=== Revision 1093 (October 18, 2008) ===
+=== Revision 1093 and 1094 (October 18, 2008) ===
 
-We have removed the `lifestream` and `locations` apps in time for 0.5.0rc1. The `locations` app will see a new life in the 0.6 release. If you have copied out your own project you will likely still have references to these apps in your `settings.py` and the top-level `urls.py`.
+We have removed the `lifestream`, `locations` and `games` apps in time for 0.5.0rc1. The `locations` app will see a new life in the 0.6 release. If you have copied out your own project you will likely still have references to these apps in your `settings.py` and the top-level `urls.py`.
 
 === Revision 1103 (October 19, 2008) ===
 
