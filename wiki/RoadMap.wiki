@@ -15,6 +15,6 @@
  * improved i18n and l10n coverage
  * other little apps as appropriate (suggest some on WishList)
 
-==Pinax 0.9 (February 2008)==
+==Pinax 0.9 (February 2009)==
 
-==Pinax 1.0 (March/April 2008)==
+==Pinax 1.0 (March/April 2009)==
