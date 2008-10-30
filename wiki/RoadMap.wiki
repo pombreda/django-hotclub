@@ -8,7 +8,7 @@
  * split off zwitschern and integrate and OMB
  * reintroduce avatars [*DONE*]
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
- * expand accounts for different signup patterns, private betas, etc
+ * expand accounts for different signup patterns, private betas, etc (see AccountRequirements)
  * merge tribes and projects into configuration org models
  * develop/integrate CMS and document management apps
  * template refactoring 
