@@ -3,12 +3,13 @@
 
 ==Pinax 0.7 (December 2008)==
 
- * integrate schedules
+ * integrate schedules [_in progress_]
  * integrate locations
  * split off zwitschern and integrate and OMB
- * reintroduce avatars
+ * reintroduce avatars [*DONE*]
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
  * expand accounts for different signup patterns, private betas, etc
+ * merge tribes and projects into configuration org models
  * develop/integrate CMS and document management apps
  * template refactoring 
  * fixtures and automated testing
