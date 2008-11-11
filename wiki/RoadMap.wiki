@@ -10,7 +10,7 @@
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
  * expand accounts for different signup patterns, private betas, etc (see AccountRequirements)
  * merge tribes and projects into configurable org models
- * develop/integrate CMS (djangoo-page-cms) and document management apps
+ * develop/integrate CMS (django-page-cms) and document management apps
  * template refactoring 
  * fixtures and automated testing
  * improved i18n and l10n coverage
