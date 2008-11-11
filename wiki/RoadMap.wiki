@@ -5,12 +5,12 @@
 
  * integrate schedules [_in progress_]
  * integrate locations
- * split off zwitschern and integrate and OMB
+ * split off zwitschern and integrate OMB
  * reintroduce avatars [*DONE*]
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
  * expand accounts for different signup patterns, private betas, etc (see AccountRequirements)
- * merge tribes and projects into configuration org models
- * develop/integrate CMS and document management apps
+ * merge tribes and projects into configurable org models
+ * develop/integrate CMS (djangoo-page-cms) and document management apps
  * template refactoring 
  * fixtures and automated testing
  * improved i18n and l10n coverage
