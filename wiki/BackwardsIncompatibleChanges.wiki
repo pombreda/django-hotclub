@@ -120,3 +120,38 @@ MIDDLEWARE_CLASSES = (
     ...
 )
 }}}
+
+=== Revision 1204 (November 13, 2008) ===
+
+OpenID support underwent a bit of fixing. Before this change we had a forked branch from django-openid. They were in local_apps (django_openidauth and django_openidconsumer). They have been removed in favor of the trunk version of django-openid that was recently refactored by Simon Willison. It is now a standard external_app reference.
+
+This change will require a patch apply and database schema change. There is a bug in django-openid that doesn't hook up the RequestContext. First begin by applying the patch:
+
+{{{
+cd apps/external_apps
+patch -p0 < django_openid_requestcontext.diff
+}}}
+
+This has been reported as http://code.google.com/p/django-openid/issues/detail?id=22.
+
+Due to the app name changing and being consolidated you will need to rename three tables if you have an existing database from before revision 1204. If you are able to drop existing tables, you can simply `syncdb` and remove the left over tables described in the migration SQL:
+
+{{{
+BEGIN;
+
+# table renames
+ALTER TABLE django_openidconsumer_nonce
+    RENAME TO django_openid_nonce;
+ALTER TABLE django_openidconsumer_association
+    RENAME TO django_openid_association;
+ALTER TABLE django_openidauth_useropenid
+    RENAME TO django_openid_useropenidassociation;
+
+# column modifications
+ALTER TABLE django_openid_nonce
+    ALTER server_url TYPE character varying(255);
+
+COMMIT;
+}}}
+
+The above SQL should be used to migrate your existing database. This has only been tested on PostgreSQL. If you can provide versions for other databases we will gladly add it here.
