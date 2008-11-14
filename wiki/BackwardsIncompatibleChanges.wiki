@@ -170,6 +170,8 @@ ALTER TABLE django_openidauth_useropenid
 -- column modifications
 ALTER TABLE django_openid_nonce
     ALTER server_url TYPE character varying(255);
+ALTER TABLE django_openid_useropenidassociation
+    RENAME created_at TO created;
 
 COMMIT;
 }}}
