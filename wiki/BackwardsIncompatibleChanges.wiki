@@ -121,6 +121,26 @@ MIDDLEWARE_CLASSES = (
 )
 }}}
 
+=== Revision 1199 - 1201 (November 12, 2008) ===
+
+The interal app `zwitschern` has been externalized as `microblogging` in the django-microblogging project. This change will require the following SQL migration:
+
+{{{
+BEGIN;
+
+-- table renames
+ALTER TABLE zwitschern_tweet
+    RENAME TO microblogging_tweet;
+ALTER TABLE zwitschern_tweetinstance
+    RENAME TO microblogging_tweetinstance;
+ALTER TABLE zwitschern_following
+    RENAME TO microblogging_following;
+
+COMMIT;
+}}}
+
+All references to `zwitschern` should be replaced with `microblogging`. This change is still in progress and can have more backward incompatible changes. `microblogging` is literally an exact copy of `zwitschern` so everything should work as is once the references have been fixed.
+
 === Revision 1204 (November 13, 2008) ===
 
 OpenID support underwent a bit of fixing. Before this change we had a forked branch from django-openid. They were in local_apps (django_openidauth and django_openidconsumer). They have been removed in favor of the trunk version of django-openid that was recently refactored by Simon Willison. It is now a standard external_app reference.
