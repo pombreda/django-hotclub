@@ -139,7 +139,7 @@ Due to the app name changing and being consolidated you will need to rename thre
 {{{
 BEGIN;
 
-# table renames
+-- table renames
 ALTER TABLE django_openidconsumer_nonce
     RENAME TO django_openid_nonce;
 ALTER TABLE django_openidconsumer_association
@@ -147,7 +147,7 @@ ALTER TABLE django_openidconsumer_association
 ALTER TABLE django_openidauth_useropenid
     RENAME TO django_openid_useropenidassociation;
 
-# column modifications
+-- column modifications
 ALTER TABLE django_openid_nonce
     ALTER server_url TYPE character varying(255);
 
