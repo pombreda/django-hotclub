@@ -160,9 +160,11 @@ There are some new templates you should be aware of. Inside both the basic and c
 
 {{{
 account/
-    password_set.html
-    password_delete.html
-    password_delete_done.html
+    base.html (modified)
+    login.html (modified)
+    password_set.html (new)
+    password_delete.html (new)
+    password_delete_done.html (new)
 
 django_openid/ (this is new)
     associations.html
