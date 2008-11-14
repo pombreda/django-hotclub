@@ -155,3 +155,18 @@ COMMIT;
 }}}
 
 The above SQL should be used to migrate your existing database. This has only been tested on PostgreSQL. If you can provide versions for other databases we will gladly add it here.
+
+There are some new templates you should be aware of. Inside both the basic and complete projects in their templates directory these are the additions:
+
+{{{
+account/
+    password_set.html
+    password_delete.html
+    password_delete_done.html
+
+django_openid/ (this is new)
+    associations.html
+    register.html
+}}}
+
+The django_openid templates are mostly copies from the older openid template directory, but have been slightly modified.
