@@ -107,7 +107,7 @@ If you have made local modifications in your project to `manage.py` you will hav
 
 We have changed settings.py to expect to import `local_settings.py` instead of `localsettings.py`. You need to simply rename any instances of `localsettings.py` to `local_settings.py` in any project that uses a local settings file to override any defaults.
 
-== 0.6 ==
+== 0.7 ==
 
 === Revision 1093 (October 18, 2008) ===
 
