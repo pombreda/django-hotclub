@@ -9,6 +9,7 @@
  * reintroduce avatars [*DONE*]
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
  * expand accounts for different signup patterns, private betas, etc (see AccountRequirements)
+ * remove old and stale django_openid* and replace with newer trunk version.
  * merge tribes and projects into configurable org models
  * develop/integrate CMS (django-page-cms) and document management apps
  * template refactoring 
