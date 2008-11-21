@@ -1,89 +1,16 @@
 #labels Phase-Implementation
 = Using Git with Pinax =
 
-If you choose to use git, who wouldn't, read this to learn how to setup Pinax. Unfortnetely checking out the Pinax source code is not as simple as a {{{ git svn clone }}}. Pinax contains some svn:externals that just do not work with {{{ git-svn }}}.
-
-There are several tutorials online that describe different methods of dealing with svn:externals, but I (brosner) prefer this method so far. That is, until someone can provide a simpler method. It is typically a good idea to keep a local directory of reusable Django applications that you can use across different projects. This is really no exception.
-
-Setup a place to store Django apps:
+If you choose to use git, who wouldn't, read this to learn how to setup Pinax. Unfortunately checking out the Pinax source code is not as simple as a {{{ git svn clone }}}. Pinax contains some svn:externals that just do not work with only a {{{ git-svn clone }}}. Go and grab git-svn-clone-externals from http://github.com/andrep/git-svn-clone-externals/tree/master and place it on your `PATH` and `chmod +x` it. Once you have done that it is as simple as doing:
 
 {{{
-mkdir ~/Development/django-apps
-cd ~/Development/django-apps
+git svn clone http://svn.pinaxproject.com/pinax/trunk pinax
+cd pinax/apps/external_apps
+git-svn-clone-externals
 }}}
 
-Then checkout the Pinax dependancies:
+You are all set. `git-svn-clone-externals` is very basic in nature. It simply:
 
-{{{
-git svn clone http://django-mailer.googlecode.com/svn/trunk/ django-mailer
-git svn clone http://django-friends.googlecode.com/svn/trunk/ django-friends
-git svn clone http://django-email-confirmation.googlecode.com/svn/trunk/ django-email-confirmation
-git svn clone http://django-command-extensions.googlecode.com/svn/trunk/ django-command-extensions
-git svn clone http://django-robots.googlecode.com/svn/trunk/ django-robots
-git svn clone http://django-databasetemplateloader.googlecode.com/svn/trunk/ django-databasetemplateloader
-git svn clone http://django-notification.googlecode.com/svn/trunk/ django-notification
-git svn clone http://django-messages.googlecode.com/svn/branches/django-trunk/ django-messages
-git svn clone http://django-announcements.googlecode.com/svn/trunk/ django-announcements
-git svn clone http://django-oembed.googlecode.com/svn/trunk/ django-oembed
-git svn clone http://django-db-log.googlecode.com/svn/trunk/ django-db-log
-git svn clone http://django-pagination.googlecode.com/svn/trunk/ django-pagination
-git svn clone http://django-threadedcomments.googlecode.com/svn/trunk/ django-threadedcomments
-git svn clone http://django-wikiapp.googlecode.com/svn/trunk/ django-wikiapp
-git svn clone http://django-evolution.googlecode.com/svn/trunk/ django-evolution
-git svn clone http://django-timezones.googlecode.com/svn/trunk/ django-timezones
-git svn clone http://django-feedutil.googlecode.com/svn/trunk/ django-feedutil
-git svn clone http://django-app-plugins.googlecode.com/svn/trunk/ django-app-plugins
-git svn clone http://django-voting.googlecode.com/svn/trunk/ django-voting
-git svn clone http://django-logging.googlecode.com/svn/trunk/ django-logging
-git svn clone http://django-bookmarks.googlecode.com/svn/trunk/ django-bookmarks
-git svn clone http://django-tagging.googlecode.com/svn/trunk/ django-tagging
-git svn clone http://django-ajax-validation.googlecode.com/svn/trunk/ django-ajax-validation
-git svn clone http://django-gravatar.googlecode.com/svn/trunk/ django-gravatar
-git svn clone http://django-crashlog.googlecode.com/svn/trunk/ django-crashlog
-git svn clone http://django-photologue.googlecode.com/svn/branches/2.0 django-photologue
-
-
-
-}}}
-
-It is really up to you how you go about getting the applications above. I use {{{ git-svn }}} because it makes it simple for me patch things in those applications and submit and or commit patches. Now somewhere else checkout the Pinax code using {{{ git-svn }}}:
-
-{{{
-cd ~/Development
-git-svn clone http://django-hotclub.googlecode.com/svn/trunk/projects/pinax
-}}}
-
-Now all that is left is using a symlink to hook everything up. Here is all the dirty work based on the {{{ ~/Development }}} folder:
-
-{{{
-cd pinax
-ln -s ~/Development/django-apps/django-mailer/mailerdev/mailer/ mailer
-ln -s ~/Development/django-apps/django-friends/friendsdev/friends/ friends
-ln -s ~/Development/django-apps/django-databasetemplateloader/dbtemplates/ dbtemplates
-ln -s ~/Development/django-apps/django-robots/robots/ robots
-ln -s ~/Development/django-apps/django-command-extensions/extensions/ extensions
-ln -s ~/Development/django-apps/django-email-confirmation/devproject/emailconfirmation/ emailconfirmation
-ln -s ~/Development/django-apps/django-notification/notification/ notification
-ln -s ~/Development/django-apps/django-messages/messages/ messages
-ln -s ~/Development/django-apps/django-announcements/announcements/ announcements
-ln -s ~/Development/django-apps/django-oembed/oembed/ oembed
-ln -s ~/Development/django-apps/django-db-log/djangodblog/ djangodblog
-ln -s ~/Development/django-apps/django-pagination/pagination/ pagination
-ln -s ~/Development/django-apps/django-threadedcomments/threadedcomments/ threadedcomments
-ln -s ~/Development/django-apps/django-wikiapp/wiki/ wiki
-ln -s ~/Development/django-apps/django-evolution/django_evolution/ django_evolution
-ln -s ~/Development/django-apps/django-timezones/timezones/ timezones
-ln -s ~/Development/django-apps/django-feedutil/feedutil/ feedutil
-ln -s ~/Development/django-apps/django-app-plugins/app_plugins/ app_plugins
-ln -s ~/Development/django-apps/django-voting/voting/ voting
-ln -s ~/Development/django-apps/django-logging/djangologging/ djangologging
-ln -s ~/Development/django-apps/django-bookmarks/bookmarks/ bookmarks
-ln -s ~/Development/django-apps/django-tagging/tagging/ tagging
-ln -s ~/Development/django-apps/django-ajax-validation/ajax_validation/ ajax_validation
-ln -s ~/Development/django-apps/django-gravatar/gravatar gravatar
-ln -s ~/Development/django-apps/django-photologue/photologue/ photologue
-
-
-}}}
-
-You are all set up. This might be good practice for other places where you need to reuse applications in projects without hacking around with the {{{ PYTHONPATH }}}.
+ * git svn clone each external into a .git_externals/ directory.
+ * symlink the cloned repository in .git_externals/ to the proper directory name.
+ * add the symlink and .git_externals/ to the .git/info/excludes/ file, so that you're not pestered about it when performing a git status.
