@@ -1,7 +1,7 @@
 #summary the current plan of record
 #labels Featured
 
-==Pinax 0.7 (December 2008)==
+==Pinax 0.7 (January 2009)==
 
  * integrate schedules [_in progress_]
  * integrate locations [_in progress_]
