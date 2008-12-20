@@ -4,13 +4,13 @@
 ==Pinax 0.7 (December 2008)==
 
  * integrate schedules [_in progress_]
- * integrate locations
+ * integrate locations [_in progress_]
  * split off zwitschern and integrate OMB [_in progress_]
  * reintroduce avatars [*DONE*]
  * support WYSIWYG markup and encourage better reuse between blogs, wikis, etc
- * expand accounts for different signup patterns, private betas, etc (see AccountRequirements)
- * remove old and stale `django_openid*` and replace with newer trunk version [_in progress_]
- * merge tribes and projects into configurable org models
+ * expand accounts for different signup patterns, private betas, etc (see AccountRequirements) [_in progress_]
+ * remove old and stale `django_openid*` and replace with newer trunk version [*DONE*]
+ * merge tribes and projects into configurable org models [_in progress_]
  * develop/integrate CMS (django-page-cms) and document management apps [_in progress_]
  * template refactoring 
  * fixtures and automated testing
