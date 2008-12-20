@@ -1,6 +1,8 @@
 #summary the current plan of record
 #labels Featured
 
+If it looks like the 0.7 will slip, we'll do a 0.6 release with what we have.
+
 ==Pinax 0.7 (January 2009)==
 
  * integrate schedules [_in progress_]
