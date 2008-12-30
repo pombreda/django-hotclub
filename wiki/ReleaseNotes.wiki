@@ -20,6 +20,6 @@ You may need to remove some Pownce bits from your templates if you forked from t
 
 === Various bug-fixes ===
 
- * Fixed a bug in django_openidconsumer that prevented login on some deployments. See [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1292/ r1292] for more information. 
- * Removed an import that was never used in profiles/views.py. [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1288/ r1288]
- * Fixed a typo of ValidationError in apps/local_apps/account/forms.py. [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1266/ r1266]
+ * [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1292/ r1292] Fixed a bug in django_openidconsumer that prevented login on some deployments
+ * [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1288/ r1288] Removed an import that was never used in profiles/views.py.
+ * [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1266/ r1266] Fixed a typo of ValidationError in apps/local_apps/account/forms.py.
