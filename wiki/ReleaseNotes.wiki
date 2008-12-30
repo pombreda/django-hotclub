@@ -5,3 +5,5 @@
 These are the release notes for each release of Pinax. Ordered latest releases first.
 
 == 0.5.1 ==
+
+ * Python 2.4 support
