@@ -1,0 +1,7 @@
+#summary Release notes for Pinax releases
+
+= Pinax Release Notes =
+
+These are the release notes for each release of Pinax. Ordered newest release first.
+
+== 0.5.1 ==
