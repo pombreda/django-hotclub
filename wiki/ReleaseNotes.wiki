@@ -7,3 +7,5 @@ These are the release notes for each release of Pinax. Ordered latest releases f
 == 0.5.1 ==
 
  * Python 2.4 support
+ * Removal of Pownce support
+ * Fixed a bug in django_openidconsumer that prevented login on some deployments. See [http://code.pinaxproject.com/codebases/codebase/pinax/changesets/1292/ r1292] for more information.
