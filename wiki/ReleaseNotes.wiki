@@ -2,6 +2,6 @@
 
 = Pinax Release Notes =
 
-These are the release notes for each release of Pinax. Ordered newest release first.
+These are the release notes for each release of Pinax. Ordered latest releases first.
 
 == 0.5.1 ==
