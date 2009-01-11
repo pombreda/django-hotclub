@@ -1,9 +1,9 @@
 #summary the current plan of record
 #labels Featured
 
-If it looks like the 0.7 will slip, we'll do a 0.6 release with what we have.
+==Pinax 0.7 (February 2009)==
 
-==Pinax 0.7 (January 2009)==
+we will be sprinting January 24th-25th online to get to a release candidate.
 
  * integrate schedules [_in progress_]
  * integrate locations [_in progress_]
@@ -19,6 +19,10 @@ If it looks like the 0.7 will slip, we'll do a 0.6 release with what we have.
  * improved i18n and l10n coverage
  * other little apps as appropriate (suggest some on WishList)
 
-==Pinax 0.9 (March 2009)==
+==Pinax 0.9/1.0 Beta (April 2009)==
 
-==Pinax 1.0 (April 2009)==
+==Pinax 1.0 (May 2009) ==
+
+we will be sprinting March 30th through April 2nd at PyCon to get to a release candidate
+
+We hope to launch Pinax 1.0 at EuroDjangoCon 2009.
