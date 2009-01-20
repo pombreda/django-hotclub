@@ -25,7 +25,7 @@ Inclusion here doesn't mean they've been decided on -- just that they are under 
   * [http://github.com/bartTC/django-frontendadmin/tree/master django-frontendadmin]
   * [http://code.google.com/p/django-batchadmin/ django-batchadmin]
   * [http://code.google.com/p/django-rcsfield/ django-rcsfield]
-  * http://bitbucket.org/david/django-invitation/
+  * [http://bitbucket.org/david/django-invitation/ django-invitation]
 
 == Yet To Be Written Apps ==
   * [http://code.google.com/p/django-opensocial/ django-opensocial]
