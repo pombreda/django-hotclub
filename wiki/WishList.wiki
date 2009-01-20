@@ -13,7 +13,6 @@ Inclusion here doesn't mean they've been decided on -- just that they are under 
   * [http://github.com/gregnewman/django-cachebuster/tree/master django-cachebuster]
   * [http://trbs.net/blog/2008/09/19/django-tabbed-admin/ Django Tabbed Admin] or similar
   * [http://github.com/robhudson/django-debug-toolbar/tree/master django-debug-toolbar]
-  * [http://code.google.com/p/django-rcsfield/ django-rcsfield]
   * [http://code.google.com/p/django-paste/ django-paste]
   * [http://birdhouse.org/software/2008/09/django-todo/ django-todo] or similar
   * [http://aeracode.org/2008/9/14/denormalisation-follies/ denormalisation from aeracode] or similar
