@@ -38,3 +38,7 @@ _and_
   * revisit eventual existing buildout recipes, write pinaxrecipe based on djangorecipe
   * try integration of pip with buildout ([http://pypi.python.org/pypi/gp.recipe.pip gp.recipe.pip])
   * docs
+
+== Removing django-things ==
+
+In light of the recent breakages with Django trunk, and at the author's suggestion, the use of django-things can be removed during the course of a sprint.
