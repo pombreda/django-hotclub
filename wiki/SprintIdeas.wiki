@@ -11,7 +11,7 @@ Figure out how to check if an app is installed correctly, e.g. [http://code.goog
 
 ==flavored projects==
 
-  * rename the "complete_project" to something more fitting, e.g. "social_project"
+  * rename the "complete_project" to something more fitting, e.g. "social_project" [JT: wait until we have something it doesn't include]
   * rethink the clone_project script and think about management command
   * move content_project in its own branch for further development if required apps not ready (talk to django-page-cms/django-cms developers)
 
@@ -20,7 +20,7 @@ Figure out how to check if an app is installed correctly, e.g. [http://code.goog
   * decide which apps fit best to the roadmap toward 1.0
   * evaluate unused apps
 
-==Preperation towards moving away from svn:externals==
+==Preparation towards moving away from svn:externals==
 
 In favor of:
 
@@ -41,4 +41,12 @@ _and_
 
 == Removing django-things ==
 
-In light of the recent breakages with Django trunk, and at the author's suggestion, the use of django-things can be removed during the course of a sprint.
+In light of the recent breakages with Django trunk [JT: and 1.0.2], and at the author's suggestion, the use of django-things can be removed during the course of a sprint.
+
+== CSS and JS ==
+
+Break out into apps-specific templates and build into a single file for production.
+
+== Groups Re-write ==
+
+== Account Re-write ==
