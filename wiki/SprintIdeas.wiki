@@ -56,4 +56,7 @@ Break out into apps-specific templates and build into a single file for producti
 Here and on dependent apps and assess whether we need to do them for 0.7
 
 == Make sure locations is properly integrated ==
+
 == Make sure schedule is property integrated ==
+
+== Improve smoke test and automatically run regularly ==
