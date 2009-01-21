@@ -60,3 +60,5 @@ Here and on dependent apps and assess whether we need to do them for 0.7
 == Make sure schedule is property integrated ==
 
 == Improve smoke test and automatically run regularly ==
+
+== Improve Fixtures ==
