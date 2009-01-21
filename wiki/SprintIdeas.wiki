@@ -1,0 +1,40 @@
+#summary What should you work on?
+#labels Phase-Requirements,Phase-Design
+
+Besides the more general [RoadMap] and the various issues the used apps have here are the things you can help us during the sprint.
+
+= Suggestions =
+
+== import vs. get_app() ==
+
+Figure out how to check if an app is installed correctly, e.g. [http://code.google.com/p/django-email-confirmation/source/detail?r=40 issue 40 of django-email-confirmation]
+
+==flavored projects==
+
+  * rename the "complete_project" to something more fitting, e.g. "social_project"
+  * rethink the clone_project script and think about management command
+  * move content_project in its own branch for further development if required apps not ready (talk to django-page-cms/django-cms developers)
+
+==app inclusion==
+
+  * decide which apps fit best to the roadmap toward 1.0
+  * evaluate unused apps
+
+==Preperation towards moving away from svn:externals==
+
+In favor of:
+
+====pip/virtualenv====
+
+  * figure out how to deal with boot straping virtualenvs
+  * write pip requirement/freeze files for the example projects
+  * make sure every app used has a valid setup.py
+  * docs
+
+_and_
+
+====buildout====
+
+  * revisit eventual existing buildout recipes, write pinaxrecipe based on djangorecipe
+  * try integration of pip with buildout ([http://pypi.python.org/pypi/gp.recipe.pip gp.recipe.pip])
+  * docs
