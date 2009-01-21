@@ -1,7 +1,7 @@
 #summary What should you work on?
 #labels Phase-Requirements,Phase-Design
 
-Besides the more general [RoadMap] and the various issues the used apps have here are the things you can help us during the sprint.
+Besides the more general [RoadMap] and the issues of the apps, here are the things you can help us during the sprint.
 
 = Suggestions =
 
