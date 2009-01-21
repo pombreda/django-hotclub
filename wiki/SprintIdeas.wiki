@@ -50,3 +50,10 @@ Break out into apps-specific templates and build into a single file for producti
 == Groups Re-write ==
 
 == Account Re-write ==
+
+== Go through all outstanding issues ==
+
+Here and on dependent apps and assess whether we need to do them for 0.7
+
+== Make sure locations is properly integrated ==
+== Make sure schedule is property integrated ==
