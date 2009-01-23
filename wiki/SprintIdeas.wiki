@@ -62,3 +62,7 @@ Here and on dependent apps and assess whether we need to do them for 0.7
 == Improve smoke test and automatically run regularly ==
 
 == Improve Fixtures ==
+
+== look at photologue 3 and ImageKit ==
+
+* look at what is new and how things are split
