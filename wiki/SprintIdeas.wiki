@@ -37,7 +37,7 @@ In favor of:
   * make sure every app used has a valid setup.py
   * docs
 
-====How to enable apps to be used with pip====
+=====How to enable apps to be used with pip=====
 
 Your app requires a basic [http://docs.python.org/distutils/setupscript.html setup.py] file to be used with pip.
 
