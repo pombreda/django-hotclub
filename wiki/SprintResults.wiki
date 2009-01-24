@@ -5,3 +5,7 @@
 Templates that are common (or potentially common) between projects have now been moved out of projects all together and put under /templates/default/
 
 See /templates/README for more detail
+
+== Removing django-things ==
+
+In light of the recent breakages with Django trunk [JT: and 1.0.2], and at the author's suggestion, the use of django-things was removed during the course of the sprint.
