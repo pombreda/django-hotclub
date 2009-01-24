@@ -7,7 +7,7 @@ Besides the more general [RoadMap] and the issues of the apps, here are the thin
 
 == common templates directory ==
 
-assignee: James Tauber
+assignee: James Tauber and Jannis Leidel
 
 == import vs. get_app() ==
 
