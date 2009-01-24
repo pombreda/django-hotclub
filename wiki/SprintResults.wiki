@@ -1,0 +1,7 @@
+#summary what we've achieved in this sprint
+
+== common templates directory ==
+
+Templates that are common (or potentially common) between projects have now been moved out of projects all together and put under /templates/default/
+
+See /templates/README for more detail
