@@ -76,10 +76,6 @@ _and_
   * try integration of pip with buildout ([http://pypi.python.org/pypi/gp.recipe.pip gp.recipe.pip])
   * docs
 
-== Removing django-things ==
-
-In light of the recent breakages with Django trunk [JT: and 1.0.2], and at the author's suggestion, the use of django-things can be removed during the course of a sprint.
-
 == CSS and JS ==
 
 Break out into apps-specific templates and build into a single file for production.
