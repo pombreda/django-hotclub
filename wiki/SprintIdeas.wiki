@@ -3,7 +3,9 @@
 
 Besides the more general [RoadMap] and the issues of the apps, here are the things you can help us with during the sprint.
 
-= Suggestions =
+=Suggestions=
+
+<wiki:toc max_depth="4" />
 
 == common templates directory ==
 
