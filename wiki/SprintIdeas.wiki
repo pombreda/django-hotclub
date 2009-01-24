@@ -7,10 +7,6 @@ Besides the more general [RoadMap] and the issues of the apps, here are the thin
 
 <wiki:toc max_depth="5" />
 
-== common templates directory ==
-
-assignee: James Tauber
-
 == import vs. get_app() ==
 
 Figure out how to check if an app is installed correctly, e.g. [http://code.google.com/p/django-email-confirmation/source/detail?r=40 issue 40 of django-email-confirmation]
