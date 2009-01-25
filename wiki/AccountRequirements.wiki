@@ -8,7 +8,7 @@ Site developers *may* want their site to:
   * ACC-3: not have any signup, just rely on admin-created accounts (with a temp password emailed *or* admin just adds the openid) [*DONE* although there's no helper for the parenthetical tasks)
   * ACC-4: have a waiting list where users "apply" for an account and an admin approves (with batch support)
   * ACC-5: be in private beta where users get a certain number of invites they can hand out
-  * ACC-6: use token-based password reset rather than emailing passwords [in progress]
+  * ACC-6: use token-based password reset rather than emailing passwords [*in progress*]
   * ACC-7: support multiple levels of user (although this isn't the place to manage permissions or subscription payments)
   * ACC-8: allow people to use their primary email address as an alternative to username when logging in
   * ACC-9: not have usernames at all and just use email address (this is a significant change throughout the rest of the apps, I suspect)
