@@ -1,0 +1,9 @@
+= New Account Notes =
+
+Notes to outline what is needed by the account rewrite.
+
+  * create newfriends app in private_beta_project as a copy of django-friends.
+  * handle SignupCodeResult post_save signal to send notification of signup.
+  * create basic_signup app to handle the non-c sign up case.
+  * implement a signup signal that receivers can do something on signup. i.e. e-mail confirmation. (introduce optional dependancy on signup apps in email_confirmation)
+  * 
