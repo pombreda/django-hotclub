@@ -9,3 +9,11 @@ See /templates/README for more detail
 == Removing django-things ==
 
 In light of the recent breakages with Django trunk [JT: and 1.0.2], and at the author's suggestion, the use of django-things was removed during the course of the sprint.
+
+== Moved closer to getting rid of svn:externals ==
+
+There are now basic requirement files for most of the apps and libs that will soon be used to create project requirement files. Made sure every app used has a valid setup.py. Assisted in adding a lot of setup.py files.
+
+== common media directory ==
+
+In preparation for moving common media files to a common directory we've added a build_media management command that traverses app, common and project media dirs to build a site_media directory. There is also a view for serving static files during development that nows where to look for the files.
