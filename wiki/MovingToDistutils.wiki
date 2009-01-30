@@ -18,9 +18,9 @@ To solve these problems and more, Pinax is switching to a distutils-based approa
   # externals dependencies are encouraged to be released as distutil-compliant packages with a valid setup.py and put on PyPI
   # development versions of dependencies can be pulled in in a variety of different ways including from git, hg or bzr repositories
 
-In order to develop from the Pinax trunk, you will need to use `pip`. Because some external dependencies are retrieved via `git` and `bzr` you will also need those if using Pinax turnk.
+In order to develop from the Pinax trunk, you will need to use [http://pip.openplans.org pip]. Because some external dependencies are retrieved via `git` and `bzr` you will also need those if using Pinax trunk.
 
-Although we will eventually have per-project requirements files, there are currently two requirements files that describe to `pip` what dependencies to bring in and how:
+Although we will eventually have per-project requirements files, there are currently two [http://pip.openplans.org/#requirements-files requirements files] that describe to `pip` what dependencies to bring in and how:
 
   * pinax/requirements/libs.txt
   * pinax/requirements/external_apps.txt
