@@ -1,0 +1,97 @@
+=New Pinax Setup=
+
+The following steps will lead you through the setup pinax trunk on ubuntu 8.10 to run with the production server using SQLite:
+
+Update the packages list:
+
+{{{
+$ sudo apt-get update
+}}}
+
+pinax is built from several packages that are hosted on svn, git and bzr so we need to install them:
+
+{{{
+$ sudo apt-get install subversion git-core bzr
+}}}
+
+virtualenv will be used to create an isolated enviorement with all the required python modules including django and pinax:
+
+{{{
+$ sudo apt-get install python-virtualenv
+}}}
+
+The python PIL is required for image processing:
+
+{{{
+$ sudo apt-get install python-imaging
+}}}
+
+The boot script will create a virtualenv named pina-env and add pinax and django to it .
+
+Download it for example to /home/username
+
+{{{
+$ wget http://svn.pinaxproject.com/pinax/trunk/bin/pinax-boot.py
+}}}
+
+Run the script:
+
+{{{
+$ python pinax-boot.py pinax-env
+}}}
+
+Activating the script will change the $PATH to point to the virtualenv bin/ directory and update your promt
+
+{{{
+http://pypi.python.org/pypi/virtualenv#activate-script
+}}}
+
+Now when you'll call python someScript.py it will be running inside your virtualenv scope rather then the global python scope:
+
+when you are on /home/username/development/pinax-env run:
+
+{{{
+$ source bin/activate
+}}}
+
+We will use pip to download all the packages spreaded across git, svn and bzr.
+
+{{{
+pip install --requirement /home/username/pinax-env/src/pinax/requirements/external_apps.txt
+}}}
+
+Pinax is shiped with several predefined projects. We'll use the basic_project as a simple example.
+
+We'll create the SQLite database using the django manage.py script.
+
+It'll ask you if you want to create
+
+move to /home/username/pinax-env/src/pinax/projects/basic_project
+
+and run:
+
+{{{
+$ python manage.py syncdb
+}}}
+
+django has a development server which make tests easy but is not suitable for production.
+
+{{{
+$ python manage.py runserver.
+}}}
+
+now you can use a web browser and navigate to http://localhost:8000 and see the basic_project
+
+When you want to update the code you have to update both pinax and the apps.
+
+When you are in the src/pinax folder run:
+
+{{{
+$ svn update
+}}}
+
+to update the apps run:
+
+{{{
+pip install --requirement /home/username/pinax-env/src/pinax/requirements/external_apps.txt
+}}}
