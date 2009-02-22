@@ -187,3 +187,7 @@ django_openid/ (this is new)
 }}}
 
 The django_openid templates are mostly copies from the older openid template directory, but have been slightly modified.
+
+=== r1592 (February 22, 2009) ===
+
+In r1592 we renamed the `pinax_clone_project.py` utility to `pinax-clone-project.py` to fix a name inconsistency. 
