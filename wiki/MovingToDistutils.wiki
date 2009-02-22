@@ -36,6 +36,6 @@ We strongly recommend the use of `virtualenv` in conjunction with `pip` to allow
 To create a Pinax virtualenv a bit faster faster we provide a [http://pypi.python.org/pypi/virtualenv#creating-your-own-bootstrap-scripts virtualenv bootstrap script]. It will create a regular [http://pypi.python.org/pypi/virtualenv virtualenv], installs [http://pypi.python.org/pypi/pip pip] and [http://pypi.python.org/pypi/Django Django] inside of it and checks out Pinax to the `src/` subdirectory. It will however *not* automatically install the requirements mentioned above. It's just for getting a Pinax virtualenv started.
 
 {{{
-    wget http://svn.pinaxproject.com/pinax/trunk/bin/pinax-boot.py
+    wget http://svn.pinaxproject.com/pinax/trunk/scripts/pinax-boot.py
     python pinax-boot.py pinax-env
 }}}
