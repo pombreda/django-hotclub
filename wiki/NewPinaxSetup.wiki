@@ -31,7 +31,7 @@ The boot script will create a virtualenv named pina-env and add pinax and django
 Download it for example to /home/username
 
 {{{
-$ wget http://svn.pinaxproject.com/pinax/trunk/script/pinax-boot.py
+$ wget http://svn.pinaxproject.com/pinax/trunk/scripts/pinax-boot.py
 }}}
 
 Run the script:
