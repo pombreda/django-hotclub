@@ -11,7 +11,7 @@ $ sudo apt-get update
 pinax is built from several packages that are hosted on svn, git and bzr so we need to install them:
 
 {{{
-$ sudo apt-get install subversion git-core bzr
+$ sudo apt-get install subversion git-core
 }}}
 
 virtualenv will be used to create an isolated enviorement with all the required python modules including django and pinax:
