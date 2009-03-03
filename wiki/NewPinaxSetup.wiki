@@ -8,7 +8,7 @@ Update the packages list:
 $ sudo apt-get update
 }}}
 
-pinax is built from several packages that are hosted on svn, git and bzr so we need to install them:
+pinax is built from several packages that are hosted on svn and git so we need to install them:
 
 {{{
 $ sudo apt-get install subversion git-core
@@ -54,7 +54,7 @@ when you are on /home/username/development/pinax-env run:
 $ source bin/activate
 }}}
 
-We will use pip to download all the packages spread across git, svn and bzr.
+We will use pip to download all the packages spread across git and svn.
 
 {{{
 pip install --requirement /home/username/pinax-env/src/pinax/requirements/external_apps.txt
