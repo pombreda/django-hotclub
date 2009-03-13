@@ -14,3 +14,4 @@ But please don't hesitate to submit proposals that are not listed here.
   * Admin interface - Create an unified admin interface based on Django's admin app
   * Integrate more reusable apps (see http://code.google.com/p/django-hotclub/wiki/WishList)
   * Create a sample project that uses Satchmo (http://www.satchmoproject.com/)
+  * Make Pinax run on Google App Engine
