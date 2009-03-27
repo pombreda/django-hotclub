@@ -27,6 +27,7 @@ Inclusion here doesn't mean they've been decided on -- just that they are under 
   * [http://bitbucket.org/david/django-invitation/ django-invitation]
   * [http://code.google.com/p/django-licenses/ django-licenses]
   * [http://github.com/fivethreeo/django-videologue django-videologue]
+  * [http://www.everyblock.com EveryBlock] (once open-sourced)
 
 == Yet To Be Written Apps ==
   * [http://code.google.com/p/django-opensocial/ django-opensocial]
