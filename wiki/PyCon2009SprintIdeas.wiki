@@ -27,3 +27,5 @@
  * auth
  * conference conf edition
  * translations
+ * django-wall integration
+ * django-application-manager application
