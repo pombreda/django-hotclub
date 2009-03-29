@@ -16,3 +16,8 @@
  * media collection
  * pinax.py management?
  * deployment recipes
+ * sample project for demoing django-schedule
+ * rename complete_project -> social_project
+ * split requirements to be per project
+ * django-page-cms
+ * user flow for openid
