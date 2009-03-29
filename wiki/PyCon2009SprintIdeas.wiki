@@ -1,0 +1,18 @@
+ * release bundling process
+ * code.pinaxproject.com
+ * pinaxproject.com
+ * documentation
+ * testing
+ * finish accounts
+ * finish groups
+ * django-friends/invitations/contacts
+ * comments refactor
+ * move to git
+ * ella integration
+ * look at other wiki pages (roadmap/sprint ideas)
+ * review tickets
+ * c27 tickets
+ * issues on da pinax project
+ * media collection
+ * pinax.py management?
+ * deployment recipes
