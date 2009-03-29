@@ -26,3 +26,4 @@
  * facebook connect
  * auth
  * conference conf edition
+ * translations
