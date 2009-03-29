@@ -1,3 +1,5 @@
+0.7 Release Items
+
  * release bundling process
  * code.pinaxproject.com
  * pinaxproject.com
@@ -5,22 +7,26 @@
  * testing
  * finish accounts
  * finish groups
+ * move to git
+ * review tickets
+ * sample project for demoing django-schedule
+ * user flow for openid
+
+
+Post 0.7 release items
+
  * django-friends/invitations/contacts
  * comments refactor
- * move to git
  * ella integration
  * look at other wiki pages (roadmap/sprint ideas)
- * review tickets
  * c27 tickets
  * issues on da pinax project
  * media collection
  * pinax.py management?
  * deployment recipes
- * sample project for demoing django-schedule
  * rename complete_project -> social_project
  * split requirements to be per project
  * django-page-cms
- * user flow for openid
  * multilingual content
  * oauth
  * facebook connect
@@ -28,4 +34,4 @@
  * conference conf edition
  * translations
  * django-wall integration
- * django-application-manager application
+ * django-application-manager integration
