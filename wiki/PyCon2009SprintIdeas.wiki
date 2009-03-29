@@ -21,3 +21,7 @@
  * split requirements to be per project
  * django-page-cms
  * user flow for openid
+ * multilingual content
+ * oauth
+ * facebook connect
+ * auth
