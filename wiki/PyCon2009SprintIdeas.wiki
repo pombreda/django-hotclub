@@ -1,5 +1,9 @@
 0.7 Release Items
 
+ * review tickets
+ * look at other wiki pages (roadmap/sprint ideas)
+ * c27 tickets
+ * issues on da pinax project
  * release bundling process
  * code.pinaxproject.com
  * pinaxproject.com
@@ -8,12 +12,8 @@
  * finish accounts
  * finish groups
  * move to git
- * review tickets
  * sample project for demoing django-schedule
  * user flow for openid
- * look at other wiki pages (roadmap/sprint ideas)
- * c27 tickets
- * issues on da pinax project
  * media collection
  * pinax.py management?
  * deployment recipes
