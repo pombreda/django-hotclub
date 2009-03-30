@@ -18,7 +18,7 @@
  * pinax.py management?
  * deployment recipes
  * rename complete_project -> social_project
-
+ * standard field naming
 
 Post 0.7 release items
 
