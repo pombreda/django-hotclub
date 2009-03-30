@@ -23,7 +23,7 @@
  * media collection
  * pinax.py management?
  * deployment recipes
- * rename complete_project -> social_project
+ * rename complete_project -> social_project (*DONE*)
  * standard field naming
 
 Post 0.7rc release items
