@@ -6,6 +6,11 @@
  * issues on da pinax project
  * release bundling process
  * code.pinaxproject.com
+    * basic_project / intranet_project
+    * wiki
+    * tasks (from intranet_project)
+    * must be authenticated to edit wiki or ticket
+    * anyone can signup
  * pinaxproject.com
  * correcting documentation
  * documentation standards
