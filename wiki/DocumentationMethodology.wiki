@@ -1,0 +1,11 @@
+= Pinax Methodology =
+
+Just follow the Sphinx doc method
+
+ # Every app has a folder called docs
+ # Every docs folder has a index.txt 
+ # Include usage.txt and install.txt
+ # Use restructed text
+ # More documentation is better than less
+ # Follow the patterns that are already there
+ # Follow the threaded comments and pagination examples
