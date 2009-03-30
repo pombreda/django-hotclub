@@ -15,7 +15,6 @@
  * correcting documentation
  * documentation standards
  * expanding documentation
- * testing
  * finish accounts
  * finish groups
  * move to git
