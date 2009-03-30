@@ -7,7 +7,9 @@
  * release bundling process
  * code.pinaxproject.com
  * pinaxproject.com
- * documentation
+ * correcting documentation
+ * documentation standards
+ * expanding documentation
  * testing
  * finish accounts
  * finish groups
