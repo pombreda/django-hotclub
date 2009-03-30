@@ -1,4 +1,4 @@
-0.7 Release Items
+0.7rc Release Items
 
  * review tickets
  * look at other wiki pages (roadmap/sprint ideas)
@@ -26,7 +26,7 @@
  * rename complete_project -> social_project
  * standard field naming
 
-Post 0.7 release items
+Post 0.7rc release items
 
  * django-friends/invitations/contacts
  * comments refactor (partial during sprint)
