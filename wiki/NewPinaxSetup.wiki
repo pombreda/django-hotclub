@@ -31,7 +31,7 @@ The boot script will create a virtualenv named pinax-env and add pinax and djang
 Download it for example to /home/username
 
 {{{
-$ wget http://svn.pinaxproject.com/pinax/trunk/scripts/pinax-boot.py
+$ wget http://github.com/pinax/pinax/raw/master/scripts/pinax-boot.py
 }}}
 
 Run the script:
