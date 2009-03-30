@@ -1,5 +1,13 @@
 =New Pinax Setup=
 
+There are several ways of setting up the development environment for Pinax.
+
+Below are some examples - one using a script (that creates a virtualenv), and one a manual setup using the handy virtualenvwrapper.
+
+Both use PIP.  (Not sure if PIP runs on Windows)
+
+== Example 1: Ubuntu and SQLite ==
+
 The following steps will lead you through the setup pinax trunk on ubuntu 8.10 to run with the production server using SQLite:
 
 Update the packages list:
@@ -95,3 +103,14 @@ to update the apps run:
 {{{
 pip install --requirement /home/username/pinax-env/src/pinax/requirements/external_apps.txt
 }}}
+
+== Example 2: virtualenvwrapper on Mac OSX with SQLite ==
+
+The following steps will lead you through setting up Pinax using virtualenvwrapper.
+
+Requirements:
+  * SQLite (comes with OSX)
+  * virtualenvwrapper
+  * Python 2.4 (or higher)
+
+(steps coming momentarily)
