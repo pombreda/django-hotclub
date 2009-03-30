@@ -11,6 +11,10 @@
  * review tickets
  * sample project for demoing django-schedule
  * user flow for openid
+ * look at other wiki pages (roadmap/sprint ideas)
+ * c27 tickets
+ * issues on da pinax project
+ * media collection
 
 
 Post 0.7 release items
@@ -18,10 +22,6 @@ Post 0.7 release items
  * django-friends/invitations/contacts
  * comments refactor
  * ella integration
- * look at other wiki pages (roadmap/sprint ideas)
- * c27 tickets
- * issues on da pinax project
- * media collection
  * pinax.py management?
  * deployment recipes
  * rename complete_project -> social_project
@@ -30,7 +30,6 @@ Post 0.7 release items
  * multilingual content
  * oauth
  * facebook connect
- * auth
  * conference conf edition
  * translations
  * django-wall integration
