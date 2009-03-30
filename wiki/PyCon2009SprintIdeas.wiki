@@ -15,6 +15,9 @@
  * c27 tickets
  * issues on da pinax project
  * media collection
+ * pinax.py management?
+ * deployment recipes
+ * rename complete_project -> social_project
 
 
 Post 0.7 release items
@@ -22,9 +25,6 @@ Post 0.7 release items
  * django-friends/invitations/contacts
  * comments refactor
  * ella integration
- * pinax.py management?
- * deployment recipes
- * rename complete_project -> social_project
  * split requirements to be per project
  * django-page-cms
  * multilingual content
