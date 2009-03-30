@@ -118,19 +118,19 @@ Requirements:
 Start here:
 
 {{{
-$ mkvirtualenv pinax
+$ mkvirtualenv mypinax
 $ easy_install pip
-$ cd .virtualenvs/pinax
+$ cd ~/.virtualenvs/mypinax
 $ git clone git://github.com/pinax/pinax.git
 $ pip install --requirement pinax/requirements/external_apps.txt
 $ easy_install django
 }}}
 
-Since pinax is one level lower than expected in the path, you need to setup a symlink so that pinax is on the path:
+Since pinax is one level lower than expected in the path, you need to setup a symlink so that pinax is on the path (I chose site-packages since it's already on the path):
 
 {{{
-$ cd /.virtualenvs/pinax/lib/python2.4/site-packages
-$ ln -s ~/.virtualenvs/pinax/pinax/pinax
+$ cd ~/.virtualenvs/mypinax/lib/python2.4/site-packages
+$ ln -s ~/.virtualenvs/mypinax/pinax/pinax
 }}}
 
 (or maybe PIP profile can be updated to add this to the path?)
@@ -138,7 +138,7 @@ $ ln -s ~/.virtualenvs/pinax/pinax/pinax
 Finally, head over to one of the sample projects, say *basic_project* and run the normal Django magic.
 
 {{{
-$ cd ~/.virtualenvs/pinax/pinax/pinax/projects/basic_project
+$ cd ~/.virtualenvs/mypinax/pinax/pinax/projects/basic_project
 $ ./manage.py syncdb
 $ ./manage.py runserver
 }}}
