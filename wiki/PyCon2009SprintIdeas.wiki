@@ -19,7 +19,7 @@
  * finish groups
  * move to git (*DONE*)
  * sample project for demoing django-schedule
- * user flow for openid
+ * user flow for openid (*DONE*)
  * media collection
  * pinax.py management?
  * deployment recipes
