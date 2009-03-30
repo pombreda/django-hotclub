@@ -23,7 +23,7 @@
 Post 0.7 release items
 
  * django-friends/invitations/contacts
- * comments refactor
+ * comments refactor [partial during sprint]
  * ella integration
  * split requirements to be per project
  * django-page-cms
