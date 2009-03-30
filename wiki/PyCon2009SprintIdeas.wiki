@@ -17,7 +17,7 @@
  * expanding documentation
  * finish accounts
  * finish groups
- * move to git
+ * move to git (*DONE*)
  * sample project for demoing django-schedule
  * user flow for openid
  * media collection
