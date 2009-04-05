@@ -1,4 +1,4 @@
-#labels Phase-Implementation
+#labels Phase-Implementation,Deprecated
 = Using Git with Pinax =
 
 If you choose to use git, who wouldn't, read this to learn how to setup Pinax. Unfortunately checking out the Pinax source code is not as simple as a {{{ git svn clone }}}. Pinax contains some svn:externals that just do not work with only a {{{ git-svn clone }}}. Go and grab git-svn-clone-externals from http://github.com/andrep/git-svn-clone-externals/tree/master and place it on your `PATH` and `chmod +x` it. Once you have done that it is as simple as doing:
